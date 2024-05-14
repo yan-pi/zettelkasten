@@ -2,16 +2,31 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <h4>⚡ Yan Zettelkasten</h4>,
+  faviconGlyph: '⚡',
+  useNextSeoProps(){
+    return {
+      titleTemplate: '%s - Yan Zettel'
+    }
+  },
+  primaryHue: {
+    light: 29,
+    dark: 29,
+  },
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/yan-pi/zettelkasten/tree/main',
   },
   chat: {
     link: 'https://discord.com',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/yan-pi/zettelkasten/tree/main',
+  navigation: {
+    prev: true,
+    next: true,
+  },
+  gitTimestamp: true,
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Made With Nextra Docs Template',
   },
 }
 
