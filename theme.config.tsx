@@ -3,6 +3,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs';
 
 const config: DocsThemeConfig = {
   logo: <h4>⚡ Yan Zettelkasten</h4>,
+  head: "Yan's Zettelkasten",
   faviconGlyph: '⚡',
   useNextSeoProps() {
     return {
@@ -24,7 +25,6 @@ const config: DocsThemeConfig = {
     prev: true,
     next: true,
   },
-  gitTimestamp: true,
   footer: {
     text: 'Made With Nextra Docs Template',
   },

@@ -30,5 +30,5 @@ function renameFilesAndDirectories(rootDir) {
     });
 }
 
-const rootDirectory = '../pages/Programing'; // Substitua pelo caminho do diretório raiz
+const rootDirectory = process.env.RENAME_SCRIPT_PATH; // Substitua pelo caminho do diretório raiz
 renameFilesAndDirectories(rootDirectory);
