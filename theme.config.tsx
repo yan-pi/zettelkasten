@@ -1,13 +1,13 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from 'react';
+import { DocsThemeConfig } from 'nextra-theme-docs';
 
 const config: DocsThemeConfig = {
   logo: <h4>⚡ Yan Zettelkasten</h4>,
   faviconGlyph: '⚡',
-  useNextSeoProps(){
+  useNextSeoProps() {
     return {
-      titleTemplate: '%s - Yan Zettel'
-    }
+      titleTemplate: '%s - Yan Zettel',
+    };
   },
   primaryHue: {
     light: 29,
@@ -28,6 +28,6 @@ const config: DocsThemeConfig = {
   footer: {
     text: 'Made With Nextra Docs Template',
   },
-}
+};
 
-export default config
+export default config;
