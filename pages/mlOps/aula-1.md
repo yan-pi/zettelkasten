@@ -57,9 +57,8 @@ Precisaremos tambem de um gerenciamento dos ambientes virtuais para `Python`, pa
 ### Docker
 Utilizaremos o `Docker` para criar e gerenciar os containers que irão rodar nossas aplicações de Machine Learning.
 
-**Windows:**
 #### Instalação do Docker:
-
+**Windows:**
 Se estiver utilizando o `Windows` sera necessario o uso do `wsl` (Windows Subsystem for Linux) para instalar o docker.
 
 Para instalar o `wsl` basta seguir a [documentação oficial.](https://docs.microsoft.com/pt-br/windows/wsl/install)
@@ -69,3 +68,55 @@ Caso esteja no `Linux`, basta seguir a [documentação oficial.](https://docs.do
 
 #### Docker Hub:
 Sera necessario estar ambientado no docker hub, para isso basta criar uma conta no [Site Oficial](https://hub.docker.com/), assim devemos conseguir verificar a imagem que iremos utilziar para o curso e publicar as nossas.
+
+#### Dockerfile:
+
+O `Dockerfile` é um arquivo de texto que contem todas as instruções necessarias para criar uma imagem do Docker. Ele é como um script em lote, a primeira linha declara a imagem base com a qual começar e, em seguida, siga as instruções para instalar os programas necessários, copiar os arquivos e assim por diante, até obter o ambiente de trabalho que precisa.
+
+- `Requirements.txt`: Arquivo que contem todas as dependencias do projeto.
+- `script.py`: Arquivo que contem o codigo do projeto.
+
+``` Dockerfile
+FROM python:3.8-slim-buster
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+```
+
+#### Build:
+A ação de criar uma imagem de contêiner com base nas informações e no contexto fornecido pelo `Dockerfile`, além de arquivos adicionais na pasta em que a imagem é criada. Você pode criar imagens com um simples comando da `Docker CLI` (Command-Line Interface).
+
+```bash
+docker build -t python:sample . .
+```
+#### Run:
+Para rodar o container basta utilizar o comando `docker run`:
+
+```bash
+docker run -it python:sample
+```
+
+#### Publicar no Docker Hub:
+Para publicar a imagem no Docker Hub, basta seguir os passos abaixo:
+
+```bash
+docker build -t your-username/python:sample 
+```
+depois é necessario realizar login no docker pelo CLI com:  
+```bash
+docker login -u your-username
+```
+inserindo a sua senha, apos isso basta realizar o push da imagem para o docker hub:
+
+```bash
+docker push your-username/python:sample
+```
+e agora para rodar a sua imagem basta utilizar o comando:
+
+```bash
+docker run your-username/python:sample
+```
