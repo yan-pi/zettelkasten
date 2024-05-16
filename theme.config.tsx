@@ -18,7 +18,7 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/yan-pi/zettelkasten/tree/main',
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://discord.gg/7GBXS29P3k',
   },
   docsRepositoryBase: 'https://github.com/yan-pi/zettelkasten/tree/main',
   navigation: {
