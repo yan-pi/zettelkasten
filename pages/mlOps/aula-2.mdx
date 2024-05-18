@@ -1,4 +1,5 @@
-# WIP: writing in progress
+import Image from 'next/image'
+
 ## Segunda Aula do Curso de MLOps
 Aula refetente ao capitulo 2.1 do [Livro de DevOps com Docker para Machine Learning](https://aurimrv.gitbook.io/pratica-devops-com-docker-para-machine-learning/id-2-desenvolvimento/2-1-do-notebook-para-aplicacao-parte-1)
 
@@ -95,8 +96,9 @@ for doc in docs:
 ```
 
 Entretando temos um erro no projeto, pois não temos o `Sklearn` instalado no
-ambiente de execução, para isso utilizaremos o `Docker` para criar um ambiente de execução
-com todas as dependencias necessarias, devemos colocar as dependencias necessarias dentro do nosso requiriments.txt.
+ambiente de execução, para isso utilizaremos o `Docker` para criar um ambiente de execução.
+
+Com todas as dependencias necessarias, devemos colocar as dependencias necessarias dentro do nosso requiriments.txt.
 
 ```requiriments.txt
 firebase-admin==6.5.0
@@ -107,11 +109,8 @@ então podemos rodar o comando de instalação das dependencias.
 ```bash
 pip install -r requirements.txt
 ```
-
-_____
-
-O professor apresentou um guia basico sobre desenvolvimento web, o proximo passo é tranformar o nosso modelo 
-computacional em uma aplicação web utilizando `Flask` e `Python`
+## Do notebook para aplicação 
+![teste](/)
 
 ```
 Add: faslk code
