@@ -11,6 +11,13 @@
     "title": "About",
     "type": "page"
   },
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "theme": {
+      "layout": "full"
+    }
+  },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
