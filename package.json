@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "yan-zettelkasten",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "A Zettelkasten system built with Next.js and Nextra",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,12 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/shuding/nextra-docs-template.git"
   },
-  "author": "Shu Ding <g@shud.in>",
-  "license": "MIT",
+  "author": "yan-pi <yanfernandes404@gmail.com>",
+  "license": "CC4.0",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/yan-pi/zettelkasten/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/yan-pi/zettelkasten",
   "dependencies": {
     "@vercel/analytics": "^1.2.2",
     "next": "^13.5.6",
