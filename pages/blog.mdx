@@ -2,9 +2,9 @@
 description: The latest Blog Posts.
 ---
 
-import { BlogIndex } from "@/components/blog/BlogIndex";
-import { Header } from "@/components/Header";
-import Link from "next/link";
+import { BlogIndex } from '@/components/blog/BlogIndex';
+import { Header } from '@/components/Header';
+import Link from 'next/link';
 
 <div className="md:container">
   <div className="flex flex-col items-center content-center text-center my-10">
@@ -12,13 +12,16 @@ import Link from "next/link";
       title="Blog"
       description={
         <>
-          The latest updates from Langfuse. See{" "}
-          for more product updates.
+          The latest Blog Posts.{" "} Check out the{" "}
+          <Link href="/rss.xml" className='text-primary hover:underline'>
+            RSS Feed
+          </Link>
         </>
       }
       className="mb-8"
       h="h1"
     />
   </div>
+
   <BlogIndex />
 </div>

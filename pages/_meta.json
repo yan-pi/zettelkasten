@@ -13,10 +13,7 @@
   },
   "blog": {
     "title": "Blog",
-    "type": "page",
-    "theme": {
-      "layout": "full"
-    }
+    "type": "page"
   },
   "contact": {
     "title": "Contact ↗",

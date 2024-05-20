@@ -31,7 +31,7 @@ export const Header = ({
         </TitleTag>
       )}
       {description && (
-        <p className="mt-6 text-2xl leading-8 font-medium tracking-wide text-primary/70">
+        <p className="mt-6 text-base leading-8 font-mono tracking-wide">
           {description}
         </p>
       )}
