@@ -1,11 +1,12 @@
 {
   "index": "Introduction",
   "articles": "Articles",
+  "buy-wisely": "Buy Wisely",
   "roadMaps": "Road Map",
   "interviews": "Interviews",
   "math": "Math",
   "reactHooks": "React Hooks",
-  "mlOps": "MLOps",
+  "mlOps": "MLOps UFBA",
   "about": {
     "title": "About",
     "type": "page"
