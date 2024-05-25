@@ -10,6 +10,9 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s - Yan Zettel',
     };
   },
+  nextThemes: {
+    defaultTheme: 'dark',
+  },
   primaryHue: {
     light: 29,
     dark: 29,
