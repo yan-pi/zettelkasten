@@ -32,7 +32,7 @@ const ArticleBlock: React.FC<ArticleBlockProps> = ({
       <CardHeader>
         <img
           alt="Article Cover Image"
-          className="rounded-t-lg object-cover w-full"
+          className="rounded object-cover w-full"
           height={200}
           src={coverImage}
           style={{
