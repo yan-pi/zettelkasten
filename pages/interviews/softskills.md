@@ -1,4 +1,5 @@
-## Soft Skills 
+## Soft Skills
+
 A list of desirable soft skills for a job interview:
 
 - Leadership ability (even if it's self-leadership)

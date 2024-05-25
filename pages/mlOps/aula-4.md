@@ -1,12 +1,10 @@
-##  Aula 4 do curso de MLOps
+## Aula 4 do curso de MLOps
 
 ### Como criar um DockerFile:
 
-O `Dockerfile` é um arquivo de texto que contem todas as instruções necessarias
-para criar uma imagem do Docker. Ele é como um script em lote, a primeira linha
-declara a imagem base com a qual começar e, em seguida, siga as instruções para
-instalar os programas necessários, copiar os arquivos e assim por diante, até
-obter o ambiente de trabalho que precisa.
+O `Dockerfile` é um arquivo de texto que contem todas as instruções necessarias para criar uma imagem do Docker. Ele é
+como um script em lote, a primeira linha declara a imagem base com a qual começar e, em seguida, siga as instruções para
+instalar os programas necessários, copiar os arquivos e assim por diante, até obter o ambiente de trabalho que precisa.
 
 Obs: Podemos utilizar repositorios mais seguros como o `chainguard`
 
@@ -24,10 +22,11 @@ CMD ["python", "script.py"]
 
 ### Build:
 
-A ação de criar uma imagem de contêiner com base nas informações e no contexto
-fornecido pelo `Dockerfile`, além de arquivos adicionais na pasta em que a
-imagem é criada. Você pode criar imagens com um simples comando da `Docker CLI`
+A ação de criar uma imagem de contêiner com base nas informações e no contexto fornecido pelo `Dockerfile`, além de
+arquivos adicionais na pasta em que a imagem é criada. Você pode criar imagens com um simples comando da `Docker CLI`
 
 ```bash
-docker run 
+docker run
 ```
+
+-> Kafka e ambiente de produção

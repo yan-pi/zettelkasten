@@ -1,7 +1,7 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
- 
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -26,7 +26,7 @@
     --radius: 0.5rem;
   }
 
-  .dark {
+  .root {
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
     --card: 20 14.3% 4.1%;
@@ -49,11 +49,11 @@
   }
 }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+@layer base {
+  * {
+    @apply border-border;
   }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

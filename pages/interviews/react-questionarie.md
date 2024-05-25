@@ -1,42 +1,75 @@
 ### 1. What is React?
-React is a JavaScript library developed by Facebook for building user interfaces, particularly single-page applications. It allows developers to create large web applications that can update and render efficiently in response to data changes. React does this by utilizing a component-based architecture, where the UI is broken down into small, reusable pieces.
+
+React is a JavaScript library developed by Facebook for building user interfaces, particularly single-page applications.
+It allows developers to create large web applications that can update and render efficiently in response to data
+changes. React does this by utilizing a component-based architecture, where the UI is broken down into small, reusable
+pieces.
 
 ### 2. Explain JSX
-JSX stands for JavaScript XML. It is a syntax extension for JavaScript that looks similar to XML or HTML. JSX allows developers to write HTML elements directly within JavaScript code, making it easier to create and visualize the structure of the UI. Under the hood, JSX is transformed into JavaScript calls to React.createElement().
+
+JSX stands for JavaScript XML. It is a syntax extension for JavaScript that looks similar to XML or HTML. JSX allows
+developers to write HTML elements directly within JavaScript code, making it easier to create and visualize the
+structure of the UI. Under the hood, JSX is transformed into JavaScript calls to React.createElement().
 
 ### 3. What is the virtual DOM?
-The virtual DOM is a lightweight, in-memory representation of the actual DOM. React uses the virtual DOM to optimize updates to the actual DOM. When the state of a component changes, React updates the virtual DOM, then compares it with a snapshot of the previous virtual DOM. This process, known as reconciliation, allows React to determine the minimal set of changes needed to update the actual DOM efficiently.
+
+The virtual DOM is a lightweight, in-memory representation of the actual DOM. React uses the virtual DOM to optimize
+updates to the actual DOM. When the state of a component changes, React updates the virtual DOM, then compares it with a
+snapshot of the previous virtual DOM. This process, known as reconciliation, allows React to determine the minimal set
+of changes needed to update the actual DOM efficiently.
 
 ### 4. What are keys in React?
-Keys are unique identifiers assigned to elements in a list. They help React identify which items have changed, been added, or removed. Using keys improves the efficiency of the rendering process, as it allows React to quickly match elements in the virtual DOM with their corresponding elements in the actual DOM.
+
+Keys are unique identifiers assigned to elements in a list. They help React identify which items have changed, been
+added, or removed. Using keys improves the efficiency of the rendering process, as it allows React to quickly match
+elements in the virtual DOM with their corresponding elements in the actual DOM.
 
 ### 5. What are state and props in React?
+
 State and props are two types of data that control a component's output in React.
 
 - **State**: Managed within the component (private) and can change over time, usually in response to user actions.
-- **Props**: Short for properties, these are read-only and passed from a parent component to a child component. They are used to pass data and event handlers to child components.
+- **Props**: Short for properties, these are read-only and passed from a parent component to a child component. They are
+  used to pass data and event handlers to child components.
 
 ### 6. What are the differences between state and props in React?
+
 - **State**: Local to the component and can be modified using setState().
-- **Props**: Passed from parent to child components and are immutable, meaning they cannot be changed by the receiving component.
+- **Props**: Passed from parent to child components and are immutable, meaning they cannot be changed by the receiving
+  component.
 
 ### 7. Explain the concept of lifting state up
-Lifting state up is a pattern where the state is moved to the closest common ancestor component that needs to share this state. This allows sibling components to communicate and share data through their common parent, which manages the state.
+
+Lifting state up is a pattern where the state is moved to the closest common ancestor component that needs to share this
+state. This allows sibling components to communicate and share data through their common parent, which manages the
+state.
 
 ### 8. What is the purpose of setState in React?
-setState is a method used to update a component's state. When setState is called, React schedules a re-render of the component, which allows the UI to reflect the new state.
+
+setState is a method used to update a component's state. When setState is called, React schedules a re-render of the
+component, which allows the UI to reflect the new state.
 
 ### 9. What is React Router?
-React Router is a library for routing in React applications. It enables the creation of single-page applications with navigation, allowing users to move between different views or pages without reloading the entire page.
+
+React Router is a library for routing in React applications. It enables the creation of single-page applications with
+navigation, allowing users to move between different views or pages without reloading the entire page.
 
 ### 10. Explain the use of useEffect
-useEffect is a hook that allows you to perform side effects in functional components. Examples of side effects include data fetching, setting up subscriptions, and manually changing the DOM. useEffect takes a function that will run after the render and optionally an array of dependencies that determine when the effect should re-run.
+
+useEffect is a hook that allows you to perform side effects in functional components. Examples of side effects include
+data fetching, setting up subscriptions, and manually changing the DOM. useEffect takes a function that will run after
+the render and optionally an array of dependencies that determine when the effect should re-run.
 
 ### 11. What are Controlled Components?
-Controlled components are those that do not maintain their own state; instead, they receive their value and any updates via props. In forms, this means the component's state is controlled by React, making it easier to manage and validate form data.
+
+Controlled components are those that do not maintain their own state; instead, they receive their value and any updates
+via props. In forms, this means the component's state is controlled by React, making it easier to manage and validate
+form data.
 
 ### 12. What is Redux and how do you use it?
-Redux is a state management library for JavaScript applications. It provides a central store to hold the state and uses actions and reducers to manage state changes predictably. To use Redux, you:
+
+Redux is a state management library for JavaScript applications. It provides a central store to hold the state and uses
+actions and reducers to manage state changes predictably. To use Redux, you:
 
 1. Create a store with createStore.
 2. Define reducers to handle actions.
@@ -45,76 +78,126 @@ Redux is a state management library for JavaScript applications. It provides a c
 5. Connect components to the store using connect or useSelector and useDispatch hooks.
 
 ### 13. Explain the concept of Higher-Order Component
-A Higher-Order Component (HOC) is a function that takes a component and returns a new component with additional props or functionality. HOCs are used for code reuse, logic abstraction, and enhancing components with additional behavior.
+
+A Higher-Order Component (HOC) is a function that takes a component and returns a new component with additional props or
+functionality. HOCs are used for code reuse, logic abstraction, and enhancing components with additional behavior.
 
 ### 14. What is the purpose of the useReducer hook?
-The useReducer hook is an alternative to useState for managing complex state logic in functional components. It works similarly to reducers in Redux, taking a reducer function and an initial state, and returning the current state and a dispatch function to update the state.
+
+The useReducer hook is an alternative to useState for managing complex state logic in functional components. It works
+similarly to reducers in Redux, taking a reducer function and an initial state, and returning the current state and a
+dispatch function to update the state.
 
 ### 15. What is the purpose of key attributes in a list in React?
-Keys help React identify which items have changed, been added, or removed. This improves the efficiency of rendering lists by allowing React to track elements between updates and only re-render what is necessary.
+
+Keys help React identify which items have changed, been added, or removed. This improves the efficiency of rendering
+lists by allowing React to track elements between updates and only re-render what is necessary.
 
 ### 16. What is the difference between class components and functional components?
+
 - **Class components**: Use ES6 classes, can hold state, and have lifecycle methods.
-- **Functional components**: Are simpler, use functions, and utilize hooks (e.g., useState, useEffect) for state and lifecycle management.
+- **Functional components**: Are simpler, use functions, and utilize hooks (e.g., useState, useEffect) for state and
+  lifecycle management.
 
 ### 17. Explain the concept of refs in React
-Refs provide a way to access the DOM nodes or React elements created in the render method. They are often used to manage focus, text selection, or media playback, as well as to integrate with third-party libraries.
+
+Refs provide a way to access the DOM nodes or React elements created in the render method. They are often used to manage
+focus, text selection, or media playback, as well as to integrate with third-party libraries.
 
 ### 18. What are React hooks?
-React hooks are functions that let you use state and other React features in functional components. Hooks such as useState, useEffect, and useContext allow you to manage state, side effects, and context without writing class components.
+
+React hooks are functions that let you use state and other React features in functional components. Hooks such as
+useState, useEffect, and useContext allow you to manage state, side effects, and context without writing class
+components.
 
 ### 19. Explain the use of the useContext hook
-The useContext hook allows you to access the context in functional components. Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+The useContext hook allows you to access the context in functional components. Context provides a way to pass data
+through the component tree without having to pass props down manually at every level.
 
 ### 20. What is dangerouslySetInnerHTML in React?
-dangerouslySetInnerHTML is a React prop that allows you to set HTML directly from a string. It is similar to using innerHTML in the DOM but is considered dangerous because it can expose your application to cross-site scripting (XSS) attacks if not handled properly.
+
+dangerouslySetInnerHTML is a React prop that allows you to set HTML directly from a string. It is similar to using
+innerHTML in the DOM but is considered dangerous because it can expose your application to cross-site scripting (XSS)
+attacks if not handled properly.
 
 ### 21. What is the purpose of componentDidMount in the lifecycle method?
-componentDidMount is a lifecycle method in class components that runs after the component is mounted to the DOM. It is commonly used for initializing data, setting up subscriptions, or making network requests.
+
+componentDidMount is a lifecycle method in class components that runs after the component is mounted to the DOM. It is
+commonly used for initializing data, setting up subscriptions, or making network requests.
 
 ### 22. What are React DevTools?
-React DevTools is a browser extension that allows you to inspect the React component hierarchy, view props and state, and debug applications. It provides a visual representation of the component tree and helps in identifying performance bottlenecks.
+
+React DevTools is a browser extension that allows you to inspect the React component hierarchy, view props and state,
+and debug applications. It provides a visual representation of the component tree and helps in identifying performance
+bottlenecks.
 
 ### 23. Explain the concept of context in React
-Context in React provides a way to pass data through the component tree without having to pass props manually at every level. It is useful for global data like themes, authentication status, or preferred language.
+
+Context in React provides a way to pass data through the component tree without having to pass props manually at every
+level. It is useful for global data like themes, authentication status, or preferred language.
 
 ### 24. What are the advantages of using React?
+
 - **Component-based architecture**: Encourages reusability and modularity.
 - **Virtual DOM**: Enhances performance by minimizing direct DOM manipulations.
 - **Declarative syntax**: Simplifies the process of building dynamic UIs.
 - **Strong community and ecosystem**: Provides numerous libraries and tools for development.
 
 ### 25. How does React handle prop drilling?
-React handles prop drilling by using context to pass data through the component tree without manually passing props at every level. Libraries like Redux or hooks like useContext also help manage state and avoid excessive prop drilling.
+
+React handles prop drilling by using context to pass data through the component tree without manually passing props at
+every level. Libraries like Redux or hooks like useContext also help manage state and avoid excessive prop drilling.
 
 ### 26. What is the purpose of shouldComponentUpdate in the lifecycle method?
-shouldComponentUpdate is a lifecycle method that determines whether a component should re-render when its state or props change. By default, it returns true, but you can override it to optimize performance by preventing unnecessary renders.
+
+shouldComponentUpdate is a lifecycle method that determines whether a component should re-render when its state or props
+change. By default, it returns true, but you can override it to optimize performance by preventing unnecessary renders.
 
 ### 27. Explain React Fragments
-React Fragments let you group multiple elements without adding an extra node to the DOM. This is useful for returning multiple elements from a component's render method without wrapping them in a parent element.
+
+React Fragments let you group multiple elements without adding an extra node to the DOM. This is useful for returning
+multiple elements from a component's render method without wrapping them in a parent element.
 
 ### 28. Explain the key prop in React Router
-The key prop in React Router is used to force a remount of a component when its key changes. This can be useful for scenarios where you need to reset the component state or trigger a re-render when navigating between routes.
+
+The key prop in React Router is used to force a remount of a component when its key changes. This can be useful for
+scenarios where you need to reset the component state or trigger a re-render when navigating between routes.
 
 ### 29. What is the purpose of forwardRef in React?
-forwardRef is a function that lets you pass a ref through a component to one of its children. It is useful for accessing the ref of a child component, especially when building reusable components that need to expose a DOM node.
+
+forwardRef is a function that lets you pass a ref through a component to one of its children. It is useful for accessing
+the ref of a child component, especially when building reusable components that need to expose a DOM node.
 
 ### 30. Explain the concept of error boundaries in React
-Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI. They help prevent errors from crashing the entire application.
+
+Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those
+errors, and display a fallback UI. They help prevent errors from crashing the entire application.
 
 ### 31. Explain the concept of memo in React
-React.memo is a higher-order component that memoizes a functional component, preventing it from re-rendering unless its props change. This optimization helps improve performance by reducing unnecessary renders.
+
+React.memo is a higher-order component that memoizes a functional component, preventing it from re-rendering unless its
+props change. This optimization helps improve performance by reducing unnecessary renders.
 
 ### 32. How does React handle forms?
-React handles forms using controlled components, where the form elements' values are managed by the component state. This approach makes it easier to handle user input, validation, and submission.
+
+React handles forms using controlled components, where the form elements' values are managed by the component state.
+This approach makes it easier to handle user input, validation, and submission.
 
 ### 33. Explain the useMemo hook
-useMemo is a hook that memoizes the result of a computation based on its dependencies. It helps optimize performance by avoiding expensive calculations on every render unless the dependencies change.
+
+useMemo is a hook that memoizes the result of a computation based on its dependencies. It helps optimize performance by
+avoiding expensive calculations on every render unless the dependencies change.
 
 ### 34. Explain the useCallback hook
-useCallback is a hook that returns a memoized version of a callback function. It is useful for preventing unnecessary re-renders of child components that depend on callback functions
 
- as props.
+useCallback is a hook that returns a memoized version of a callback function. It is useful for preventing unnecessary
+re-renders of child components that depend on callback functions
+
+as props.
 
 ### 35. Explain the concept of Suspense in React
-Suspense is a React component that allows you to suspend rendering while waiting for some asynchronous operation to complete, such as data fetching. It can be used with React.lazy to dynamically load components or with concurrent features to manage complex loading states.
+
+Suspense is a React component that allows you to suspend rendering while waiting for some asynchronous operation to
+complete, such as data fetching. It can be used with React.lazy to dynamically load components or with concurrent
+features to manage complex loading states.
