@@ -1,0 +1,72 @@
+---
+title: 'My choices for Arch Sats CashBack'
+date: 2024/05/26
+description: 'An overview of the technologies I would use to build Arch Sats CashBack.'
+---
+
+import { BlogHeader } from '@/components/blog/BlogHeader';
+
+<BlogHeader
+  title="My choices for Arch Sats CashBack"
+  date="2024/05/26"
+  description="An overview of the technologies I would use to build Arch Sats CashBack."
+/>
+
+## Arch Sats CashBack
+
+### BackEnd:
+
+- NestJs + clean arch (could be microservices)
+  - MongoDb
+  - recomended libraries:
+    - zod
+    - typeORM or Prisma or Drizzle ORM
+    - eslint
+      - prettier
+      - husky + lint-staged
+- Ponctual Lambdas
+
+### FrontEnd:
+
+#### Web-App ReactJs:
+
+- Folder structure recomendation
+  - Bulletproof React
+- Recomended Libraries:
+  - Zustand
+  - Vitest
+  - TailwindCss
+  - Tanstack query
+  - Shadcn/Ui components
+  - eslint
+    - prettier
+    - husky + lint-staged
+
+#### LandingPage NextJs:
+
+- Static Site Generation
+- Folder structure recomendation
+  - Bulletproof React
+- Recomended Libraries:
+  - Magic UI
+  - Zustand
+  - Vitest
+  - TailwindCss
+  - Tanstack query
+  - Shadcn/Ui components
+  - eslint
+    - prettier
+    - husky + lint-staged
+
+#### Mobile (React Native):
+
+- Expo
+- Recomended Libraries:
+  - Zustand
+  - Vitest
+  - TailwindCss
+  - Tanstack query
+  - Shadcn/Ui components
+  - eslint
+    - prettier
+    - husky + lint-staged
