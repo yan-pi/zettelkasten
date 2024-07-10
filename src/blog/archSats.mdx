@@ -1,0 +1,79 @@
+---
+title: 'My choices for Arch Sats CashBack'
+date: 2024/05/26
+description: 'An overview of the technologies I would use to build Arch Sats CashBack.'
+---
+
+import { BlogHeader } from '@/components/blog/BlogHeader';
+
+<BlogHeader
+  title="My choices for Arch Sats CashBack"
+  date="2024/05/26"
+  description="An overview of the technologies I would use to build Arch Sats CashBack."
+/>
+
+## Arch Sats CashBack
+
+If I had to create a robust codebase, which technologies would I choose?
+
+This is an exercise in imagination, where I try to predict the technologies I would use to create a cashback project.
+It would require a Landing Page, a Web App, and a Mobile App.
+In addition to a robust backend dedicated to microservices.
+
+
+### BackEnd:
+
+- NestJs + clean arch (could be microservices)
+  - MongoDb
+  - recomended libraries:
+    - zod
+    - typeORM or Prisma or Drizzle ORM
+    - eslint
+      - prettier
+      - husky + lint-staged
+- Ponctual Lambdas
+
+### FrontEnd:
+
+#### Web-App ReactJs:
+
+- Folder structure recomendation
+  - Bulletproof React
+- Recomended Libraries:
+  - Zustand
+  - Vitest
+  - TailwindCss
+  - Tanstack query
+  - Shadcn/Ui components
+  - eslint
+    - prettier
+    - husky + lint-staged
+
+#### LandingPage NextJs:
+
+- Static Site Generation
+- Folder structure recomendation
+  - Bulletproof React
+- Recomended Libraries:
+  - Magic UI
+  - Zustand
+  - Vitest
+  - TailwindCss
+  - Tanstack query
+  - Shadcn/Ui components
+  - eslint
+    - prettier
+    - husky + lint-staged
+
+#### Mobile (React Native):
+
+- Expo
+- Recomended Libraries:
+  - Zustand
+  - Vitest
+  - TailwindCss
+  - Tanstack query
+  - Shadcn/Ui components
+  - eslint
+    - prettier
+    - husky + lint-staged
