@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export default function App({ Component, pageProps }: AppProps) {
+  
   return (
     <>
       <ThemeProvider attribute="class">

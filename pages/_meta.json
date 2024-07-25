@@ -3,6 +3,9 @@
     "title": "Home",
     "type": "page"
   },
+  "about":{
+    "title": "About"
+  },
   "articles": "Articles",
   "buy-wisely": "Buy Wisely",
   "roadMaps": "Road Map",
@@ -10,10 +13,6 @@
   "math": "Math",
   "reactHooks": "React Hooks",
   "mlOps": "MLOps UFBA",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
   "blog": {
     "title": "Blog",
     "type": "page"
