@@ -1,48 +1,67 @@
-const { promises: fs } = require('fs');
+const fs = require('fs');
 const path = require('path');
 const RSS = require('rss');
 const matter = require('gray-matter');
+const dotenv = require('dotenv');
+const { type } = require('os');
 
-async function generate() {
+dotenv.config({ path: '.env' });
+
+console.log('SITE_URL:', process.env.SITE_URL); // Verification
+
+const postsDirectory = path.join(process.cwd(), 'pages', 'blog');
+
+function getPosts() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = fileNames.map(fileName => {
+    const filePath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const { data, content } = matter(fileContents);
+
+    return {
+      title: data.title,
+      date: data.date,
+      description: data.description,
+      author: data.author,
+      categoty: data.category,
+      type: data.type,
+      image: data.image,
+      content: content,
+      slug: fileName.replace(/\.md$/, ''),
+    };
+  });
+
+  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+function generateRSS() {
+  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
+  const feedUrl = `${siteUrl}/rss.xml`;
+
   const feed = new RSS({
     title: 'Yan Fernandes Blog',
-    site_url: 'https://yan-zettelkasten.vercel.app/blog/',
-    feed_url: 'https://yan-zettelkasten.vercel.app/feed.xml',
+    description: 'This is my blog',
+    feed_url: feedUrl,
+    site_url: siteUrl,
     language: 'en',
   });
 
-  const getBlogPosts = async (dir) => {
-    const entries = await fs.readdir(dir, { withFileTypes: true });
-    const files = await Promise.all(entries.map(async (entry) => {
-      const res = path.resolve(dir, entry.name);
-      return entry.isDirectory() ? getBlogPosts(res) : res;
-    }));
-    return Array.prototype.concat(...files);
-  };
+  const posts = getPosts();
 
-  const posts = await getBlogPosts(path.join(__dirname, '..', 'pages', 'blog'));
+  posts.forEach(post => {
+    feed.item({
+      title: post.title,
+      description: post.content,
+      author: post.author,
+      categories: post.categoty,
+      enclosure: { url: `${siteUrl}${post.image}` },
+      url: `${siteUrl}/blog/${post.slug}`,
+      date: post.date,
+    });
+  });
 
-  await Promise.all(
-    posts.map(async (filePath) => {
-      if (!filePath.endsWith('.md') && !filePath.endsWith('.mdx')) return;
-
-      const content = await fs.readFile(filePath, 'utf8');
-      const frontmatter = matter(content);
-
-      feed.item({
-        title: frontmatter.data.title,
-        url: 'https://yan-zettelkasten.vercel.app/blog/' + path.basename(filePath).replace(/\.mdx?/, ''),
-        date: new Date(frontmatter.data.date).toUTCString(),
-        description: frontmatter.data.description,
-        categories: frontmatter.data.tags,
-        author: frontmatter.data.author,
-        enclosure: { url: 'https://yan-zettelkasten.vercel.app' + frontmatter.data.image },
-      });
-    })
-  );
-
-  await fs.writeFile(path.join(__dirname, '..', 'public', 'feed.xml'), feed.xml({ indent: true }));
-  console.log('RSS feed generated successfully!');
+  const rss = feed.xml({ indent: true });
+  fs.writeFileSync(path.join(process.cwd(), 'public', 'rss.xml'), rss);
 }
 
-generate().catch(err => console.error(err));
+generateRSS();
