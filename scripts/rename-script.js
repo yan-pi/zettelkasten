@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 
 function renameFilesAndDirectories(rootDir) {
   fs.readdirSync(rootDir).forEach((entry) => {
@@ -11,8 +12,8 @@ function renameFilesAndDirectories(rootDir) {
     if (isDirectory) {
       // Convertendo para camelCase
       newEntryName = entryLowerCase.replace(/-([a-z])/g, (match, group1) => group1.toUpperCase());
-    } else {
-      // Substituindo a extensão para .mdx
+    } else if (entryPath.endsWith('.md')) {
+      // Substituindo a extensão para .mdx se o arquivo for .md
       const { name } = path.parse(newEntryName);
       newEntryName = path.join(path.dirname(newEntryName), name + '.mdx');
     }
@@ -30,5 +31,9 @@ function renameFilesAndDirectories(rootDir) {
   });
 }
 
-const rootDirectory = process.env.RENAME_SCRIPT_PATH; // Substitua pelo caminho do diretório raiz
+const rootDirectory = process.env.RENAME_SCRIPT_PATH; // Usando variável de ambiente
+if (!rootDirectory) {
+  console.error('A variável de ambiente RENAME_SCRIPT_PATH não está definida.');
+  process.exit(1);
+}
 renameFilesAndDirectories(rootDirectory);
