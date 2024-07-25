@@ -1,7 +1,8 @@
 {
   "index": {
     "title": "Home",
-    "type": "page"
+    "type": "page",
+    "display": "hidden"
   },
   "zettelkasten": {
     "title": "Zettelkasten",
@@ -14,6 +15,7 @@
   "blog": {
     "title": "Blog",
     "type": "page"
+
   },
   "contact": {
     "title": "Contact ↗",
