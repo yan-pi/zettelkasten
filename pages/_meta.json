@@ -3,16 +3,14 @@
     "title": "Home",
     "type": "page"
   },
-  "about":{
-    "title": "About"
+  "zettelkasten": {
+    "title": "Zettelkasten",
+    "type": "page"
   },
-  "articles": "Articles",
-  "buy-wisely": "Buy Wisely",
-  "roadMaps": "Road Map",
-  "interviews": "Interviews",
-  "math": "Math",
-  "reactHooks": "React Hooks",
-  "mlOps": "MLOps UFBA",
+  "articles": {
+    "title": "Articles",
+    "type": "article"
+  },
   "blog": {
     "title": "Blog",
     "type": "page"
