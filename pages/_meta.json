@@ -1,5 +1,8 @@
 {
-  "index": "Introduction",
+  "index": {
+    "title": "Home",
+    "type": "page"
+  },
   "articles": "Articles",
   "buy-wisely": "Buy Wisely",
   "roadMaps": "Road Map",
