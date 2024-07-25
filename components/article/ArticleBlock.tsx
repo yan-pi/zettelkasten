@@ -47,7 +47,7 @@ const ArticleBlock: React.FC<ArticleBlockProps> = ({
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Avatar>
-                <AvatarImage alt="Author Avatar" src={authorAvatar} />
+                <AvatarImage alt="Yans Author Avatar" src={authorAvatar} />
                 <AvatarFallback>{authorName.charAt(0)}</AvatarFallback>
               </Avatar>
               <div className="text-sm">
@@ -62,7 +62,7 @@ const ArticleBlock: React.FC<ArticleBlockProps> = ({
       </CardContent>
       <CardFooter className="flex justify-end">
         <Link className="text-primary hover:underline" target='blank' href={articleUrl}>
-          Read more
+          Read more 
         </Link>
       </CardFooter>
     </Card>

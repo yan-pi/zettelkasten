@@ -10,7 +10,7 @@
   },
   "articles": {
     "title": "Articles",
-    "type": "article"
+    "type": "page"
   },
   "blog": {
     "title": "Blog",
