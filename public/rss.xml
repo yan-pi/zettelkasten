@@ -4,19 +4,13 @@
         <description><![CDATA[This is my blog]]></description>
         <link>https://zettelkasten.vercel.app</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 25 Jul 2024 16:11:11 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 26 Jul 2024 15:24:20 GMT</lastBuildDate>
         <atom:link href="https://zettelkasten.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
         <item>
             <title><![CDATA[How to start taking notes with Obsidian]]></title>
             <description><![CDATA[
-import { BlogHeader } from '@/components/blog/BlogHeader';
 
-<BlogHeader
-  title="How to start taking notes with Obsidian"
-  date="2024/06/05"
-  description="This is my Blog post About how to start taking notes with Obsidian"
-/>
 
 ## Articles 
 My Articles about how to start taking notes with [Obsidian](https://obsidian.md/):
@@ -40,8 +34,8 @@ _____
 EN: [Obsidian: The King of Learning Tools (FULL GUIDE + SETUP)](https://www.youtube.com/watch?v=hSTy_BInQs8&t=1s)
 
 EN: [Form, Function, & Fun! - My Obsidian Vault Tour](https://www.youtube.com/watch?v=rAkerV8rlow)]]></description>
-            <link>https://zettelkasten.vercel.app/blog/how-to-start-taking-notes.mdx</link>
-            <guid isPermaLink="true">https://zettelkasten.vercel.app/blog/how-to-start-taking-notes.mdx</guid>
+            <link>https://zettelkasten.vercel.app/blog/how-to-start-taking-notes</link>
+            <guid isPermaLink="true">https://zettelkasten.vercel.app/blog/how-to-start-taking-notes</guid>
             <category><![CDATA[Obsidian]]></category>
             <category><![CDATA[Zettelkasten]]></category>
             <dc:creator><![CDATA[Yan Fernandes]]></dc:creator>
@@ -51,13 +45,7 @@ EN: [Form, Function, & Fun! - My Obsidian Vault Tour](https://www.youtube.com/wa
         <item>
             <title><![CDATA[MY FIRST BLOG POST]]></title>
             <description><![CDATA[
-import { BlogHeader } from '@/components/blog/BlogHeader';
 
-<BlogHeader
-  title="MY FIRST BLOG POST"
-  date="2024/05/18"
-  description="This is my first blog post. I'm excited to share my thoughts with you!"
-/>
 
 Estou gostando muito da minha produtividade criando este projeto, conseguir criar um thema de Blog para utilizar no
 zettelkasten. Outra feature que gostaria de implementar é a de envio de emails, provalvemente vou utilizar o
@@ -69,8 +57,8 @@ Proximas coisas para trabalhar no zettelkasten são:
 - Adicionar uma Tag de `New Item` para os arquivos que forem adicionados no diretorio de `pages/docs`
 - Criar uma LandingPage pessoal ou algo do tipo para ser meu site pessoal e profissional
 ]]></description>
-            <link>https://zettelkasten.vercel.app/blog/my-first-blog-post.mdx</link>
-            <guid isPermaLink="true">https://zettelkasten.vercel.app/blog/my-first-blog-post.mdx</guid>
+            <link>https://zettelkasten.vercel.app/blog/my-first-blog-post</link>
+            <guid isPermaLink="true">https://zettelkasten.vercel.app/blog/my-first-blog-post</guid>
             <pubDate>Sat, 18 May 2024 03:00:00 GMT</pubDate>
             <enclosure url="https://zettelkasten.vercel.appundefined" length="0" type="false"/>
         </item>

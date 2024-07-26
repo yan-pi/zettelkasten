@@ -3,11 +3,10 @@ const path = require('path');
 const RSS = require('rss');
 const matter = require('gray-matter');
 const dotenv = require('dotenv');
-const { type } = require('os');
 
 dotenv.config({ path: '.env' });
 
-console.log('SITE_URL:', process.env.SITE_URL); // Verification
+console.log('SITE_URL:', process.env.SITE_URL);
 
 const postsDirectory = path.join(process.cwd(), 'pages', 'blog');
 
@@ -18,16 +17,22 @@ function getPosts() {
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
 
+    // Remove the import statement for BlogHeader
+    const contentWithoutImport = content.replace(/import\s*{\s*BlogHeader\s*}\s*from\s*['"]@\/components\/blog\/BlogHeader['"];?\s*/g, '');
+
+    // Remove the BlogHeader component
+    const contentWithoutBlogHeader = contentWithoutImport.replace(/<BlogHeader[\s\S]*?\/>/g, '');
+
     return {
       title: data.title,
       date: data.date,
       description: data.description,
       author: data.author,
-      categoty: data.category,
+      category: data.category,
       type: data.type,
       image: data.image,
-      content: content,
-      slug: fileName.replace(/\.md$/, ''),
+      content: contentWithoutBlogHeader,
+      slug: fileName.replace(/\.mdx$/, ''),
     };
   });
 
@@ -53,7 +58,7 @@ function generateRSS() {
       title: post.title,
       description: post.content,
       author: post.author,
-      categories: post.categoty,
+      categories: post.category,
       enclosure: { url: `${siteUrl}${post.image}` },
       url: `${siteUrl}/blog/${post.slug}`,
       date: post.date,
