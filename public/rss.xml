@@ -2,10 +2,10 @@
     <channel>
         <title><![CDATA[Yan Fernandes Blog]]></title>
         <description><![CDATA[This is my blog]]></description>
-        <link>https://zettelkasten.vercel.app</link>
+        <link>https://yanfer.vercel.app/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 26 Jul 2024 15:24:20 GMT</lastBuildDate>
-        <atom:link href="https://zettelkasten.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 26 Jul 2024 17:00:46 GMT</lastBuildDate>
+        <atom:link href="https://yanfer.vercel.app//rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
         <item>
             <title><![CDATA[How to start taking notes with Obsidian]]></title>
@@ -34,13 +34,13 @@ _____
 EN: [Obsidian: The King of Learning Tools (FULL GUIDE + SETUP)](https://www.youtube.com/watch?v=hSTy_BInQs8&t=1s)
 
 EN: [Form, Function, & Fun! - My Obsidian Vault Tour](https://www.youtube.com/watch?v=rAkerV8rlow)]]></description>
-            <link>https://zettelkasten.vercel.app/blog/how-to-start-taking-notes</link>
-            <guid isPermaLink="true">https://zettelkasten.vercel.app/blog/how-to-start-taking-notes</guid>
+            <link>https://yanfer.vercel.app//blog/how-to-start-taking-notes</link>
+            <guid isPermaLink="true">https://yanfer.vercel.app//blog/how-to-start-taking-notes</guid>
             <category><![CDATA[Obsidian]]></category>
             <category><![CDATA[Zettelkasten]]></category>
             <dc:creator><![CDATA[Yan Fernandes]]></dc:creator>
             <pubDate>Wed, 05 Jun 2024 03:00:00 GMT</pubDate>
-            <enclosure url="https://zettelkasten.vercel.app/image.jpg" length="0" type="image/jpeg"/>
+            <enclosure url="https://yanfer.vercel.app//image.jpg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[MY FIRST BLOG POST]]></title>
@@ -57,10 +57,10 @@ Proximas coisas para trabalhar no zettelkasten são:
 - Adicionar uma Tag de `New Item` para os arquivos que forem adicionados no diretorio de `pages/docs`
 - Criar uma LandingPage pessoal ou algo do tipo para ser meu site pessoal e profissional
 ]]></description>
-            <link>https://zettelkasten.vercel.app/blog/my-first-blog-post</link>
-            <guid isPermaLink="true">https://zettelkasten.vercel.app/blog/my-first-blog-post</guid>
+            <link>https://yanfer.vercel.app//blog/my-first-blog-post</link>
+            <guid isPermaLink="true">https://yanfer.vercel.app//blog/my-first-blog-post</guid>
             <pubDate>Sat, 18 May 2024 03:00:00 GMT</pubDate>
-            <enclosure url="https://zettelkasten.vercel.appundefined" length="0" type="false"/>
+            <enclosure url="https://yanfer.vercel.app/undefined" length="0" type="false"/>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
@@ -77,9 +77,9 @@ Proximas coisas para trabalhar no zettelkasten são:
   }
 }
 ]]></description>
-            <link>https://zettelkasten.vercel.app/blog/_meta.json</link>
-            <guid isPermaLink="true">https://zettelkasten.vercel.app/blog/_meta.json</guid>
-            <enclosure url="https://zettelkasten.vercel.appundefined" length="0" type="false"/>
+            <link>https://yanfer.vercel.app//blog/_meta.json</link>
+            <guid isPermaLink="true">https://yanfer.vercel.app//blog/_meta.json</guid>
+            <enclosure url="https://yanfer.vercel.app/undefined" length="0" type="false"/>
         </item>
     </channel>
 </rss>
