@@ -5,7 +5,9 @@
 Dentro da Polkadot utilizamos o conceito de modulos para organizar o código. O primeiro módulo que iremos criar é o
 `Balances`, que será responsável por gerenciar os saldos das contas.
 
-Podemos verificar essa abordagem olhando para o [repositorio da polkadot-SDK](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame), onde temos a estrutura de diretórios e arquivos organizados em modulos dos `Pallets` da Polkadot.
+Podemos verificar essa abordagem olhando para o
+[repositorio da polkadot-SDK](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame), onde temos a
+estrutura de diretórios e arquivos organizados em modulos dos `Pallets` da Polkadot.
 
 ```shell
 touch balances.rs
@@ -15,16 +17,18 @@ touch balances.rs
 // balances.rs
 pub struct Pallet {}
 ```
+
 podemos importar o modulo da seguinte maneira:
+
 ```rust
 // main.rs
 mod balances;
 ```
 
-> Rodando o codigo com ```cargo run``` teremos um warning, pois não estamos utilizando o modulo `balances` ainda.
+> Rodando o codigo com `cargo run` teremos um warning, pois não estamos utilizando o modulo `balances` ainda.
 
 ```shell
-➜  learn-rust-web3 git:(main) ✗ cargo run 
+➜  learn-rust-web3 git:(main) ✗ cargo run
    Compiling learn-rust-web3 v0.1.0 (/home/yan/Documentos/Repository/learn-rust-web3)
 warning: struct `Pallet` is never constructed
  --> src/balances.rs:1:12
@@ -39,4 +43,5 @@ warning: `learn-rust-web3` (bin "learn-rust-web3") generated 1 warning
      Running `target/debug/learn-rust-web3`
 Hello, world!
 ``
- 
+
+```

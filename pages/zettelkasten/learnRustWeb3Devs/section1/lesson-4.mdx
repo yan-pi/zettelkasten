@@ -1,16 +1,20 @@
-## Teste basico de STRI
+Aqui está a versão corrigida da sua anotação:
 
-Para testar codigos em Rust, podemos escrevar um macro direto no arquivo assim:
+---
+
+## Teste básico de STRI
+
+Para testar códigos em Rust, podemos escrever uma macro diretamente no arquivo assim:
 
 ```rust
-//balances.rs
+// balances.rs
 #[test]
 ```
 
-E então podemos contruir os nossos testes para as nossas funções de balances:
+E então podemos construir os nossos testes para as funções de balances:
 
 ```rust
-//balances.rs
+// balances.rs
 #[test]
 fn init_balances() {
     let mut balances = Pallet::new();
@@ -22,7 +26,7 @@ fn init_balances() {
 }
 ```
 
-> Esta função de teste irá criar um novo `Pallet`, verificar se o saldo de `yan` é 0, adicionar 10 ao saldo de `yan`, e
+> Esta função de teste irá criar um novo `Pallet`, verificar se o saldo de `yan` é 0, adicionar 10 ao saldo de `yan` e
 > então verificar se o saldo de `yan` é 10 e o saldo de `bubu` é 0.
 
 Para rodar o teste, podemos utilizar o comando `cargo test`:
@@ -39,7 +43,7 @@ test balances::init_balances ... ok
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
 
-outro teste que podemos fazer é verificar se o saldo de uma conta foi atualizado corretamente:
+Outro teste que podemos fazer é verificar se o saldo de uma conta foi atualizado corretamente:
 
 ```rust
 #[test]
@@ -52,13 +56,13 @@ fn update_balance() {
 }
 ```
 
-com o resultado esperado:
+Com o resultado esperado:
 
 ```shell
 ➜  learn-rust-web3 git:(main) ✗ cargo test
- Compiling learn-rust-web3 v0.1.0 (/home/yan/Documentos/Repository/learn-rust-web3)
-  Finished `test` profile [unoptimized + debuginfo] target(s) in 0.30s
-   Running unittests src/main.rs (target/debug/deps/learn_rust_web3-f468dfd07d9e4ce6)
+   Compiling learn-rust-web3 v0.1.0 (/home/yan/Documentos/Repository/learn-rust-web3)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.30s
+     Running unittests src/main.rs (target/debug/deps/learn_rust_web3-f468dfd07d9e4ce6)
 
 running 2 tests
 test balances::init_balances ... ok

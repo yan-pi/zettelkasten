@@ -1,24 +1,28 @@
+Aqui está a versão corrigida da sua anotação:
+
+---
+
 ## Interagindo com Pallet Balances
 
-Nesta aula iremos implementar a interação com o Pallet Balances, criando funções para adicionar saldo, consultar saldo e
-transferir saldo entre contas.
+Nesta aula, iremos implementar a interação com o Pallet Balances, criando funções para adicionar saldo, consultar saldo
+e transferir saldo entre contas.
 
 Primeiro, vamos adicionar uma função para adicionar saldo a uma conta. Para isso, criamos um método `set_balance` que
 recebe o endereço da conta e o valor do saldo a ser adicionado.
 
 ```rust
-  pub fn set_balance(&mut self, account: String, amount: u128) {
+pub fn set_balance(&mut self, account: String, amount: u128) {
     self.balances.insert(account, amount);
-  }
+}
 ```
 
-> Nota-se que o método `set_balance` é uma função mutável, pois estamos alterando o estado do Pallet. O método
-> `insert` > é utilizado para adicionar um novo par chave-valor ao `BTreeMap`.
+> Nota-se que o método `set_balance` é mutável, pois estamos alterando o estado do Pallet. O método `insert` é utilizado
+> para adicionar um novo par chave-valor ao `BTreeMap`.
 
-> Alem disso ele é um metodo que existe dentro do `Pallet` e recebe como parametro o `account` que é uma `String` e
-> o >`amount` que é um `u128`.
+> Além disso, ele é um método que existe dentro do `Pallet` e recebe como parâmetro o `account`, que é uma `String`, e o
+> `amount`, que é um `u128`.
 
-Esta é a implementação inteira:
+Esta é a implementação completa:
 
 ```rust
 impl Pallet {
@@ -34,11 +38,11 @@ impl Pallet {
 }
 ```
 
-Na explicação do Daniel eu consegui entender melhor do que se trata essa macarronada, o `&slef` é o proprio objeto que
-estamos manipulando nessa função, e o quando usamos o modificador `&mut` significa que estamos alterando o estado do
-objeto, e o `&` sozinho significa que estamos apenas lendo o objeto.
+Na explicação do Daniel, consegui entender melhor do que se trata essa "macarronada". O `&self` é o próprio objeto que
+estamos manipulando nessa função, e, quando usamos o modificador `&mut`, significa que estamos alterando o estado do
+objeto. Já o `&` sozinho significa que estamos apenas lendo o objeto.
 
-Partindo para a proxima função que vamos contruir, deve ser a `get_balance`:
+Partindo para a próxima função que vamos construir, ela deve ser a `get_balance`:
 
 ```rust
 pub fn get_balance(&self, account: String) -> u128 {
@@ -46,10 +50,10 @@ pub fn get_balance(&self, account: String) -> u128 {
 }
 ```
 
-Aqui ficou mais facil de entender, basicamente estamos pegando o saldo de uma conta, e se a conta não existir,
+Aqui ficou mais fácil de entender. Basicamente, estamos pegando o saldo de uma conta e, se a conta não existir,
 retornamos 0.
 
-Para utilizarmos oque construirmos, vamos fazer um teste no `main.rs` utilizando as funções que criamos:
+Para utilizarmos o que construímos, vamos fazer um teste no `main.rs`, utilizando as funções que criamos:
 
 ```rust
 mod balances;
@@ -64,7 +68,7 @@ fn main() {
 }
 ```
 
-utilizamos o comando `cargo run` para rodar o código e ver o resultado.
+Utilizamos o comando `cargo run` para rodar o código e ver o resultado.
 
 ```shell
 ➜  learn-rust-web3 git:(main) ✗ cargo run
@@ -75,7 +79,7 @@ utilizamos o comando `cargo run` para rodar o código e ver o resultado.
 Balance: 2
 ```
 
-E é isso, conseguimos adicionar saldo a uma conta, consultar o saldo e imprimir o saldo na tela.
+E é isso! Conseguimos adicionar saldo a uma conta, consultar o saldo e imprimir o saldo na tela.
 
-Importante perceber que desta maneira a gente consegue garantir que a implementação do `Pallet` com `BTreeMap`fica
-restrita apenas ao `Pallet` e não é acessível de fora, garantindo a integridade dos dados e flexibilidade.
+É importante perceber que, dessa maneira, conseguimos garantir que a implementação do `Pallet` com `BTreeMap` fique
+restrita apenas ao `Pallet` e não seja acessível de fora, garantindo a integridade dos dados e flexibilidade.
