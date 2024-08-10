@@ -1,0 +1,44 @@
+## Implementação da Estrutura de Dados BTreeMap
+
+Na aula anterior entendemos o uso dos pallets e criamos uma ```struct``` para representar o ```Balances Pallet```. Nesta aula iremos implementar a estrutura de dados ```BTreeMap``` para armazenar os saldos das contas.
+
+Primeiro importamos a estrutura de dados ```BTreeMap``` da biblioteca padrão do Rust.
+
+> (algo que pessoalmente eu gostei muito de existir por padrão no Rust, é a documentação da linguagem, que é muito bem > feita e detalhada, e pode ser acessada [aqui](https://doc.rust-lang.org/std/collections/struct.BTreeMap.html))
+
+```rust
+// balances.rs
+use std::collections::BTreeMap;
+```
+O BTreeMap é uma estrutura de dados que armazena pares de chave-valor em ordem. A chave é armazenada em uma árvore B, que é uma estrutura de dados de árvore balanceada. Isso significa que a árvore é dividida em nós que contêm chaves e valores, e cada nó tem um número limitado de filhos. A árvore é balanceada para garantir que a profundidade da árvore seja mantida em um nível razoável.
+
+Apos importarmos o BTreeMap, podemos adicionar um campo de saldo à nossa struct Pallet.
+
+```rust
+pub struct Pallet {
+    balances: BTreeMap<String, u128>,
+}
+```
+
+Neste trecho de código, criamos um campo ```balances``` do tipo ```BTreeMap<String, u128>```. Isso significa que o saldo de cada conta será armazenado como um par de chave-valor, onde a chave é uma ```String``` que representa o endereço da conta e o valor é um ```u128``` que representa o saldo da conta.
+
+> Neste caso o `struct` esta servindo como uma interface.
+
+Mesmo assim o `Pallet` ainda não está sendo utilizado, tanto que recebemos o warning por isso.
+
+entrão podemos implementar a interface `Pallet` para que o warning seja removido.
+
+```rust
+impl Pallet {
+  pub fn new() -> Self {
+    Self {
+      balances: BTreeMap::new(),
+    }
+  }
+}
+```
+
+Você pode confirmar neste ponto que tudo ainda deve estar compilando, e que você não cometeu nenhum erro pequeno.
+Em seguida, vamos realmente começar a usar este módulo.
+
+

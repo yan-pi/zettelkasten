@@ -1,0 +1,81 @@
+## Interagindo com Pallet Balances
+
+Nesta aula iremos implementar a interação com o Pallet Balances, criando funções para adicionar saldo, consultar saldo e
+transferir saldo entre contas.
+
+Primeiro, vamos adicionar uma função para adicionar saldo a uma conta. Para isso, criamos um método `set_balance` que
+recebe o endereço da conta e o valor do saldo a ser adicionado.
+
+```rust
+  pub fn set_balance(&mut self, account: String, amount: u128) {
+    self.balances.insert(account, amount);
+  }
+```
+
+> Nota-se que o método `set_balance` é uma função mutável, pois estamos alterando o estado do Pallet. O método
+> `insert` > é utilizado para adicionar um novo par chave-valor ao `BTreeMap`.
+
+> Alem disso ele é um metodo que existe dentro do `Pallet` e recebe como parametro o `account` que é uma `String` e
+> o >`amount` que é um `u128`.
+
+Esta é a implementação inteira:
+
+```rust
+impl Pallet {
+  pub fn new() -> Self {
+    Self {
+      balances: BTreeMap::new(),
+    }
+  }
+
+  pub fn set_balance(&mut self, account: String, amount: u128) {
+    self.balances.insert(account, amount);
+  }
+}
+```
+
+Na explicação do Daniel eu consegui entender melhor do que se trata essa macarronada, o `&slef` é o proprio objeto que
+estamos manipulando nessa função, e o quando usamos o modificador `&mut` significa que estamos alterando o estado do
+objeto, e o `&` sozinho significa que estamos apenas lendo o objeto.
+
+Partindo para a proxima função que vamos contruir, deve ser a `get_balance`:
+
+```rust
+pub fn get_balance(&self, account: String) -> u128 {
+    *self.balances.get(&account).unwrap_or(&0)
+}
+```
+
+Aqui ficou mais facil de entender, basicamente estamos pegando o saldo de uma conta, e se a conta não existir,
+retornamos 0.
+
+Para utilizarmos oque construirmos, vamos fazer um teste no `main.rs` utilizando as funções que criamos:
+
+```rust
+mod balances;
+use balances::Pallet;
+
+fn main() {
+    let mut pallet = Pallet::new();
+    pallet.set_balance("daniel".to_string(), 2);
+    let balance = pallet.get_balance("daniel".to_string());
+
+    println!("Balance: {}", balance);
+}
+```
+
+utilizamos o comando `cargo run` para rodar o código e ver o resultado.
+
+```shell
+➜  learn-rust-web3 git:(main) ✗ cargo run
+   Compiling learn-rust-web3 v0.1.0 (/home/yan/Documentos/Repository/learn-rust-web3)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.30s
+     Running `target/debug/learn-rust-web3`
+
+Balance: 2
+```
+
+E é isso, conseguimos adicionar saldo a uma conta, consultar o saldo e imprimir o saldo na tela.
+
+Importante perceber que desta maneira a gente consegue garantir que a implementação do `Pallet` com `BTreeMap`fica
+restrita apenas ao `Pallet` e não é acessível de fora, garantindo a integridade dos dados e flexibilidade.
