@@ -22,12 +22,14 @@ const config: DocsThemeConfig = {
     const { asPath, defaultLocale, locale } = useRouter();
     const { frontMatter } = useConfig();
     const url = `${baseUrl}` + (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
-
+    const ogImageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(frontMatter.title || 'Yan Fernandes')}`;
+    
     return (
       <>
         <meta property="og:url" content={url} />
-        <meta property="og:title" content={frontMatter.title || 'Nextra'} />
-        <meta property="og:description" content={frontMatter.description || 'The next site builder'} />
+        <meta property="og:title" content={frontMatter.title || 'Yan Fernandes'} />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:description" content={frontMatter.description || 'My personal website, notes and toughts'} />
       </>
     );
   },
