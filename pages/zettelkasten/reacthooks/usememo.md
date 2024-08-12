@@ -1,6 +1,6 @@
 ---
 title: 'React Hooks - useMemo'
-date: 2024/05/18
+
 tags: ['Zettelkasten', 'Typescript', 'React', 'Hooks']
 type: 'post'
 author: 'Yan Fernandes'

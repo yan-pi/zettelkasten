@@ -1,7 +1,8 @@
 ---
 title: 'UFBA-MLOps - Lesson 2'
-date: 2024/05/18
-description: 'An overview of the MLOps course at UFBA (Federal University of Bahia) in partnership with the Tomorrow Foundation.' 
+
+description:
+  'An overview of the MLOps course at UFBA (Federal University of Bahia) in partnership with the Tomorrow Foundation.'
 tags: ['Zettelkasten', 'MLOps', 'UFBA', 'ML', 'Docker', 'Python']
 type: 'post'
 author: ['Daniel Lucrédio', 'Yan Fernandes']
@@ -131,16 +132,20 @@ Vamos rodar o codigo de criação do ambiente virtual.
 pyenv virtualenv 3.10.2 http-api-classificacao-produtos
 pyenv activate http-api-classificacao-produtos
 ```
+
 Depois devemos criar os nossos `requiriments.txt` com o seguinte conteudo:
+
 ```requiriments.txt
 Flask==3.0.2
 scikit-learn==1.4.1.post1
 ```
+
 ```bash
 pip install -r requirements.txt
 ```
-Agora precisamos utilizar o nosso modelo treinado para fazer a classificação dos produtos, o modelo é salvo como um arquivo `.sav` e
-precisamos carregar ele para fazer a classificação.
+
+Agora precisamos utilizar o nosso modelo treinado para fazer a classificação dos produtos, o modelo é salvo como um
+arquivo `.sav` e precisamos carregar ele para fazer a classificação.
 
 nosso `app.py` ficara da seguinte forma:
 
@@ -165,7 +170,9 @@ def predizer_categoria():
 
     return jsonify(response)
 ```
-e então rodando os comandos: 
+
+e então rodando os comandos:
+
 ```bash
 export FLASK_DEBUG=1
 flask run
@@ -176,6 +183,7 @@ devemos ter o nosso servidor web rodando com o nosso modelo treinado para fazer 
 OBS: devemos habilitar o CORS (cross-Origin Resource Sharing) para permitir que o nosso frontend acesse o nosso backend.
 
 `requirements.txt`
+
 ```requirements.txt
 +Flask-Cors==4.0.0
 ```
@@ -183,10 +191,13 @@ OBS: devemos habilitar o CORS (cross-Origin Resource Sharing) para permitir que 
 ```bash
 pip install -r requirements.txt
 ```
+
 então devemos adicionar o CORS ao nosso `app.py`
 
 ```python
 app = Flask(__name__)
 +CORS(app)
 ```
-Por fim, teremos uma aplicação web funcional com nosso modelo carregado, o front-end dessa aplicação funcionara da mesma maneira que um serviço web convencional
+
+Por fim, teremos uma aplicação web funcional com nosso modelo carregado, o front-end dessa aplicação funcionara da mesma
+maneira que um serviço web convencional

@@ -1,11 +1,10 @@
 ---
 title: 'React Hooks - useState'
-date: 2024/05/18
+
 tags: ['Zettelkasten', 'Typescript', 'React', 'Hooks']
 type: 'post'
 author: 'Yan Fernandes'
 ---
-
 
 `useState` is a hook that enables functional components to manage their own state. Prior to the introduction of hooks,
 state management was primarily done using class components. However, with the `useState` hook, functional components can
