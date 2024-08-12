@@ -1,3 +1,11 @@
+---
+title: 'React Hooks - useCallback'
+date: 2024/05/18
+tags: ['Zettelkasten', 'Typescript', 'React', 'Hooks']
+type: 'post'
+author: 'Yan Fernandes'
+---
+
 The `useCallback` hook is used in React to memoize and optimize the creation of callback functions in functional
 components. It's particularly useful when passing functions as props to child components to prevent unnecessary
 re-renders.

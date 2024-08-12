@@ -1,3 +1,11 @@
+---
+title: 'React Hooks - useContext'
+date: 2024/05/18
+tags: ['Zettelkasten', 'Typescript', 'React', 'Hooks']
+type: 'post'
+author: 'Yan Fernandes'
+---
+
 The `useContext` hook in React allows you to access the value of a context directly within a functional component.
 Context provides a way to share data, such as configuration settings or state, between components without having to pass
 props manually through every level of the component tree.

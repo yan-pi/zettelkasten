@@ -1,3 +1,11 @@
+---
+title: 'React Hooks - useEffect'
+date: 2024/05/18
+tags: ['Zettelkasten', 'Typescript', 'React', 'Hooks']
+type: 'post'
+author: 'Yan Fernandes'
+---
+
 The `useEffect` hook is a vital part of React's functional component API, allowing you to perform side effects in your
 components. Side effects are actions that occur outside the usual flow of your component's render cycle, such as data
 fetching, DOM manipulation, and subscriptions. _Obs: its triggered by a [[useState]] changing_

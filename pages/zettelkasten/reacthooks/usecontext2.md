@@ -1,5 +1,9 @@
-Of course! Let's explain the `useContext` hook for a beginner developer with some additional clarifications:
-
+---
+title: 'React Hooks - useContext'
+date: 2024/05/18
+tags: ['Zettelkasten', 'Typescript', 'React', 'Hooks']
+type: 'post'
+author: 'Yan Fernandes'
 ---
 
 **`useContext` Hook - Sharing Data Between Components**

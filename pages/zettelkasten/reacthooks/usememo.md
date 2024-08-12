@@ -1,3 +1,11 @@
+---
+title: 'React Hooks - useMemo'
+date: 2024/05/18
+tags: ['Zettelkasten', 'Typescript', 'React', 'Hooks']
+type: 'post'
+author: 'Yan Fernandes'
+---
+
 **`useMemo` Hook**
 
 The `useMemo` hook in React allows you to memoize the results of expensive calculations or computations in functional
