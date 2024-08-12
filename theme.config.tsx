@@ -1,39 +1,35 @@
 import React from 'react';
 import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
   ? `${process.env.NEXT_PUBLIC_BASE_URL}`
-  : 'https://yan-zettelkasten.vercel.app/'
+  : 'https://yan-zettelkasten.vercel.app/';
 
 const config: DocsThemeConfig = {
-  logo: <strong>⚡ Yan Fernandes</strong>,
+  logo: <p>⚡ Yan Fernandes</p>,
   faviconGlyph: '⚡',
   useNextSeoProps() {
-    const { asPath } = useRouter()
+    const { asPath } = useRouter();
     if (asPath !== '/') {
       return {
-        titleTemplate: '%s – Yan Zettelkasten'
-      }
+        titleTemplate: '%s – Yan Zettelkasten',
+      };
     }
   },
   head: () => {
-    const { asPath, defaultLocale, locale } = useRouter()
-    const { frontMatter } = useConfig()
-    const url =
-      `${baseUrl}` +
-      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
- 
+    const { asPath, defaultLocale, locale } = useRouter();
+    const { frontMatter } = useConfig();
+    const url = `${baseUrl}` + (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
+
     return (
       <>
         <meta property="og:url" content={url} />
         <meta property="og:title" content={frontMatter.title || 'Nextra'} />
-        <meta
-          property="og:description"
-          content={frontMatter.description || 'The next site builder'}
-        />
+        <meta property="og:description" content={frontMatter.description || 'The next site builder'} />
       </>
-    )
+    );
   },
   nextThemes: {
     defaultTheme: 'dark',
@@ -46,12 +42,6 @@ const config: DocsThemeConfig = {
     defaultMenuCollapseLevel: 1,
     toggleButton: true,
   },
-  project: {
-    link: 'https://github.com/yan-pi/zettelkasten/tree/main',
-  },
-  chat: {
-    link: 'https://discord.gg/7GBXS29P3k',
-  },
   docsRepositoryBase: 'https://github.com/yan-pi/zettelkasten/tree/main',
   navigation: {
     prev: true,
@@ -59,15 +49,28 @@ const config: DocsThemeConfig = {
   },
   footer: {
     text: (
-      <span>
-        CC-BY-4.0 license {new Date().getFullYear()} ©{' '}
-        <a href="https://github.com/yan-pi/zettelkasten/tree/main?tab=CC-BY-4.0-1-ov-file" target="_blank">
-          Yan Fernandes
-        </a>
-        .
-      </span>
-    )
-  }
+      <div className="flex flex-row justify-between w-full">
+        <span>
+          CC-BY-4.0 license {new Date().getFullYear()} ©{' '}
+          <a href="https://github.com/yan-pi/zettelkasten/tree/main?tab=CC-BY-4.0-1-ov-file" target="_blank">
+            Yan Fernandes
+          </a>
+          .
+        </span>
+        <div className="flex flex-row gap-4">
+          <Link className="underline" href="https://x.com/yamigake" target="_blank">
+            X
+          </Link>
+          <Link href="https://github.com/yan-pi" target="_blank">
+            GitHub
+          </Link>
+          <Link href="https://www.linkedin.com/in/yanfernandes/" target="_blank">
+            Linkedin
+          </Link>
+        </div>
+      </div>
+    ),
+  },
 };
 
 export default config;
