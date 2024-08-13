@@ -12,7 +12,6 @@ export default async function handler(req) {
   const tagsParam = searchParams.get('tags') || '';
 
   const tags = tagsParam ? tagsParam.split(',') : [];
-  const website = process.env.SITE_URL;
 
   const [interBoldFontData, interMediumFontData] = await Promise.all([
     fetch(new URL('../../public/Inter_28pt-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer()),
