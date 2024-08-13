@@ -6,8 +6,13 @@ export const config = {
 
 export default async function handler(req) {
   const { searchParams } = new URL(req.url);
-  const description = searchParams.get('description') || '';
-  const title = searchParams.get('title') || 'Yan Fernandes';
+
+  const title = searchParams.get('title') || '⚡ Yan Fernandes';
+  const date = searchParams.get('date') || true;
+  const tagsParam = searchParams.get('tags') || '';
+
+  const tags = tagsParam ? tagsParam.split(',') : [];
+  const website = process.env.SITE_URL;
 
   const [interBoldFontData, interMediumFontData] = await Promise.all([
     fetch(new URL('../../public/Inter_28pt-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer()),
@@ -18,13 +23,11 @@ export default async function handler(req) {
     (
       <div
         style={{
-          width: '1200px',
-          height: '630px',
-          padding: '27px 32px',
-          background: '#2B2B2B',
           display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
+          backgroundColor: '#383838',
+          height: '100%',
+          width: '100%',
+          padding: '6% 8%',
           position: 'relative',
         }}
       >
@@ -33,64 +36,26 @@ export default async function handler(req) {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
+            width: '100%',
           }}
         >
-          <div
-            style={{
-              width: '519px',
-              height: '124px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              alignItems: 'flex-start',
-            }}
-          >
-            <div
-              style={{
-                color: 'white',
-                fontSize: '64px',
-                fontWeight: '700',
-                wordWrap: 'break-word',
-                fontFamily: 'Inter-Bold',
-              }}
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <p
+              style={{ fontSize: '72px', fontWeight: 700, marginTop: 4, color: 'whitesmoke', fontFamily: 'Inter-Bold' }}
             >
               {title}
-            </div>
-            <div
-              style={{
-                color: 'white',
-                fontSize: '32px',
-                fontWeight: '500',
-                wordWrap: 'break-word',
-                fontFamily: 'Inter-Medium',
-              }}
-            >
-              {description}
-            </div>
+            </p>
           </div>
-        </div>
-        <div
-          style={{
-            fontSize: 100,
-            color: 'black',
-            width: '100%',
-            height: '100%',
-            padding: '50px 200px',
-            textAlign: 'center',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          ⚡
-        </div>
-        <div
-          style={{
-            color: 'white',
-            alignSelf: 'flex-end',
-          
-          }}
-        >
-          2024 Yan Fernandes 
+          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+            {tags.length > 0 ? (
+              <p style={{ display: 'flex', gap: 8, color: 'whitesmoke', fontFamily: 'Inter-Medium' }}>
+                {tags.map((tag, i) => (
+                  <span key={i}>#{tag}</span>
+                ))}
+              </p>
+            ) : null}
+            {date ? <p style={{ color: 'whitesmoke', fontFamily: 'Inter-Medium' }}>{date}</p> : null}
+          </div>
         </div>
       </div>
     ),
