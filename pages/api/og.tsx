@@ -6,7 +6,7 @@ export const config = {
 
 export default async function handler(req) {
   const { searchParams } = new URL(req.url);
-  const title = searchParams.get('title') || '⚡ Yan Fernandes';
+  const title = searchParams.get('title') || 'Yan Fernandes';
   const date = searchParams.get('date') || true;
   const tagsParam = searchParams.get('tags') || '';
   const tags = tagsParam ? tagsParam.split(',') : [];
