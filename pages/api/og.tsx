@@ -6,17 +6,24 @@ export const config = {
 
 export default async function handler(req) {
   const { searchParams } = new URL(req.url);
-
   const title = searchParams.get('title') || '⚡ Yan Fernandes';
   const date = searchParams.get('date') || true;
   const tagsParam = searchParams.get('tags') || '';
-
   const tags = tagsParam ? tagsParam.split(',') : [];
 
-  const [interBoldFontData, interMediumFontData] = await Promise.all([
-    fetch(new URL('../../public/Inter_28pt-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer()),
-    fetch(new URL('../../public/Inter_28pt-Medium.ttf', import.meta.url)).then((res) => res.arrayBuffer()),
-  ]);
+  // Fetch fonts only if necessary
+  const fontPromises = [];
+  if (title || tags.length > 0) {
+    fontPromises.push(
+      fetch(new URL('../../public/Inter_28pt-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer())
+    );
+  }
+  if (date) {
+    fontPromises.push(
+      fetch(new URL('../../public/Inter_28pt-Medium.ttf', import.meta.url)).then((res) => res.arrayBuffer())
+    );
+  }
+  const [interBoldFontData, interMediumFontData] = await Promise.all(fontPromises);
 
   return new ImageResponse(
     (
