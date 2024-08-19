@@ -1,6 +1,6 @@
 ---
 title: 'Como começar com Vue.js - Encontro Bahia Devs'
-date: 2024/06/05
+date: 2024/08/19
 description: 'Estas são minhas notas de uma apresentação sobre Vue.js que tive no open-coding semanal do Bahia Devs.'
 category: ['Programming', 'Vuejs', 'JavaScript', 'Frontend']
 type: 'post'
