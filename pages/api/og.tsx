@@ -15,12 +15,12 @@ export default async function handler(req) {
   const fontPromises = [];
   if (title || tags.length > 0) {
     fontPromises.push(
-      fetch(new URL('../../public/Inter_28pt-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer())
+      fetch(new URL('../../public/Inter_18pt-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer())
     );
   }
   if (date) {
     fontPromises.push(
-      fetch(new URL('../../public/Inter_28pt-Medium.ttf', import.meta.url)).then((res) => res.arrayBuffer())
+      fetch(new URL('../../public/Inter_18pt-Medium.ttf', import.meta.url)).then((res) => res.arrayBuffer())
     );
   }
   const [interBoldFontData, interMediumFontData] = await Promise.all(fontPromises);
