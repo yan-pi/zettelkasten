@@ -7,3 +7,6 @@ TODO:
 - [ ] Add Husky to run prettier on commit
 - [ ] Setup CI/CD and GitHub Actions
 - [ ] Add underline Styles to text
+
+https://documenter.getpostman.com/view/15402503/Tzm8Fb5f
+https://intercom.help/dolphinteam/en/articles/7127390-basic-automation-dolphin-anty
