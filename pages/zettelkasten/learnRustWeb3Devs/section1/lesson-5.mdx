@@ -15,7 +15,9 @@ Atores Maliciosos Em um sistema de blockchain, a segurança é primordial. Atore
 vulnerabilidades, como saldos insuficientes durante transferências de fundos, ou problemas de overflow/underflow. As
 operações de matemática segura e mecanismos de tratamento de erros do Rust ajudam a mitigar esses riscos.
 
-Matemática Segura As operações de matemática segura do Rust previnem overflow e underflow. Os métodos `checked_add` e
+### Matemática Segura 
+
+As operações de matemática segura do Rust previnem overflow e underflow. Os métodos `checked_add` e
 `checked_sub` retornam uma `Option` que permite lidar com possíveis erros aritméticos de forma segura.
 
 No Rust, o tipo `Option` é uma parte fundamental da biblioteca padrão, projetada para lidar com cenários onde um valor
