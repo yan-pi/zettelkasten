@@ -27,7 +27,7 @@ ausente.
 Métodos como `checked_add` e `checked_sub` retornam `Option` para indicar sucesso ou falha devido a overflow ou
 underflow.
 
-```Rust
+```rust
 let result = a.checked_add(b);
 match result {
     Some(sum) => println!("Sum: {}", sum),
@@ -43,7 +43,7 @@ usado para funções que podem encontrar erros durante sua execução.
 O tipo Result é uma enum definida na biblioteca padrão. Ela tem duas variantes: `Ok(value)` para um resultado
 bem-sucedido e `Err(error)` para um erro:
 
-```Rust
+```rust
 enum Result<T, E> {
     Ok(T),
     Err(E),
@@ -56,7 +56,7 @@ quaisquer erros com uma string básica.
 
 Você pode então definir o tipo `Result` assim:
 
-```Rust
+```rust
 Result<(), &'static str>
 ```
 
@@ -67,7 +67,7 @@ tudo corre conforme o esperado. Nesse contexto, queremos uma função que retorn
 matemática segura retornar `None`. Para isso, podemos encadear `ok_or` juntamente com `?` diretamente após a operação de
 matemática segura, assim:
 
-```Rust
+```rust
 let new_from_balance = from_balance
     .checked_sub(amount)
     .ok_or("Not enough funds.")?;
@@ -85,7 +85,7 @@ Nesse caso, estamos escrevendo código que trata completamente o tipo `Option` d
 
 No `balances.rs`:
 
-```Rust
+```rust
 impl Pallet {
     /// ... código anterior.
 
@@ -114,7 +114,7 @@ impl Pallet {
 
 Tambem no ``balances.rs``:
 
-```Rust
+```rust
 mod tests {
      /// ... código anterior.
 
