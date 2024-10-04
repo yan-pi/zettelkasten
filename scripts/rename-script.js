@@ -12,10 +12,10 @@ function renameFilesAndDirectories(rootDir) {
     if (isDirectory) {
       // Convertendo para camelCase
       newEntryName = entryLowerCase.replace(/-([a-z])/g, (match, group1) => group1.toUpperCase());
-    } else if (entryPath.endsWith('.md')) {
+    } else if (entryPath.endsWith('.mdx')) {
       // Substituindo a extensão para .mdx se o arquivo for .md
       const { name } = path.parse(newEntryName);
-      newEntryName = path.join(path.dirname(newEntryName), name + '.mdx');
+      newEntryName = path.join(path.dirname(newEntryName), name + '.md');
     }
 
     const newEntryPath = path.join(rootDir, newEntryName);
