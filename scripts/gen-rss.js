@@ -12,13 +12,16 @@ const postsDirectory = path.join(process.cwd(), 'pages', 'blog');
 
 function getPosts() {
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map(fileName => {
+  const allPostsData = fileNames.map((fileName) => {
     const filePath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
 
     // Remove the import statement for BlogHeader
-    const contentWithoutImport = content.replace(/import\s*{\s*BlogHeader\s*}\s*from\s*['"]@\/components\/blog\/BlogHeader['"];?\s*/g, '');
+    const contentWithoutImport = content.replace(
+      /import\s*{\s*BlogHeader\s*}\s*from\s*['"]@\/components\/blog\/BlogHeader['"];?\s*/g,
+      ''
+    );
 
     // Remove the BlogHeader component
     const contentWithoutBlogHeader = contentWithoutImport.replace(/<BlogHeader[\s\S]*?\/>/g, '');
@@ -53,7 +56,7 @@ function generateRSS() {
 
   const posts = getPosts();
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     feed.item({
       title: post.title,
       description: post.content,

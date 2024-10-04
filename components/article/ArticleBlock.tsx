@@ -61,8 +61,8 @@ const ArticleBlock: React.FC<ArticleBlockProps> = ({
         </div>
       </CardContent>
       <CardFooter className="flex justify-end">
-        <Link className="text-primary hover:underline" target='blank' href={articleUrl}>
-          Read more 
+        <Link className="text-primary hover:underline" target="blank" href={articleUrl}>
+          Read more
         </Link>
       </CardFooter>
     </Card>

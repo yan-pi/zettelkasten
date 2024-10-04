@@ -11,12 +11,8 @@
             "id": "de3f15dfb1a01aa2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "learnrustweb3devs/section1/lesson-3.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "learnrustweb3devs/section1/lesson-3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "learnrustweb3devs/section1/lesson-3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "learnrustweb3devs/section1/lesson-3.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,43 +138,43 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ee4c3f8b5ad07210",
+  "active": "de3f15dfb1a01aa2",
   "lastOpenFiles": [
-    "uiux/appleinterfaceannotations/add-personality-ux-writing.md",
-    "uiux/ui-ux-studies-content.md",
-    "uiux/appleinterfaceannotations",
-    "uiux/_meta.json",
-    "uiux",
-    "courses/reactmetacourse/react-course-meta-(coursera).md",
-    "courses/reactmetacourse/modules/week02/week02/rulesOfHooksAndFetchingDataWithHooks/rulesofhooks/what-you-need-to-know-before-fetching-data.md",
-    "courses/reactmetacourse/modules/week02/week02/rulesOfHooksAndFetchingDataWithHooks/rulesofhooks/what-are-the-rules-of-hooks.md",
-    "courses/reactmetacourse/modules/week02/week02/rulesOfHooksAndFetchingDataWithHooks/rulesofhooks/fetching-data-with-hooks.md",
-    "courses/reactmetacourse/modules/week02/week02/rulesOfHooksAndFetchingDataWithHooks/rulesofhooks/fetching-data---putting-it-all-together.md",
-    "courses/reactmetacourse/modules/week02/week02/rulesOfHooksAndFetchingDataWithHooks/rulesofhooks/data-fetching-using-hooks.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/exercise/solution.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/exercise/exercise.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basicofreact/working-with-complex-data-in-usestate.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basicofreact/what-is-the-useeffect-hook.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basicofreact/what-are-side-effects.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basicofreact/using-the-usestate-hooks.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basicofreact/using-the-useeffect-hook.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basicofreact/revising-usestate-hook.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basicofreact/additional-resources.md",
-    "courses/reactmetacourse/modules/week02/week02/rulesOfHooksAndFetchingDataWithHooks/rulesofhooks",
-    "courses/reactmetacourse/modules/week02/week02/rulesOfHooksAndFetchingDataWithHooks/rules-of-hooks-and-fetching-data-with-hooks.md",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/exercise",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basicofreact",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks/basic-of-react-hooks.md",
-    "courses/reactmetacourse/modules/week02/week02/advancedHooks/advanced-hooks.md",
-    "courses/reactmetacourse/modules/week01/renderingListsInReact/renderinglist/what-are-keys-in.md",
-    "courses/reactmetacourse/modules/week01/renderingListsInReact/renderinglist/using-keys-within-list-components.md",
-    "courses/reactmetacourse/modules/week01/renderingListsInReact/renderinglist/transforming-lists-in-javascript.md",
-    "courses/reactmetacourse/modules/week01/renderingListsInReact/renderinglist/render-a-simple-list-component.md",
-    "courses/reactmetacourse/modules/week01/renderingListsInReact/renderinglist/diference-between-key-and-id.md",
-    "courses/reactmetacourse/modules/week01/renderingListsInReact/renderinglist/additional-content-list.md",
-    "courses/reactmetacourse/modules/week02/week02/rulesOfHooksAndFetchingDataWithHooks",
-    "courses/reactmetacourse/modules/week02/week02/basicOfReactHooks",
-    "courses/reactmetacourse/modules/week02/week02/advancedHooks",
-    "courses/reactmetacourse/modules/week01/renderingListsInReact/renderinglist"
+    "react-meta-course.md",
+    "learn-rust-web3devs.md",
+    "ui-ux/appleInterfaceAnnotations/add-personality-ux-writing.md",
+    "ui-ux/ui-ux-studies-content.md",
+    "ui-ux/appleInterfaceAnnotations",
+    "ui-ux/_meta.json",
+    "ui-ux",
+    "react-meta-course/week02/basic-hooks/exercise/solution.md",
+    "react-meta-course/week02/basic-hooks/exercise/exercise.md",
+    "react-meta-course/week01/rendering-lists-in-react/exercise/tamplate-solution.md",
+    "react-meta-course/week01/rendering-lists-in-react/exercise/exercise-create-a-basic-list-component.md",
+    "react-meta-course/week01/react-forms/exercise/my-solution-(forms).md",
+    "react-meta-course/week01/react-forms/exercise/exercise-create-a-registration-form.md",
+    "react-meta-course/week01/context-in-react/exercise/solution-based.md",
+    "react-meta-course/week01/context-in-react/exercise/my-solution-(context).md",
+    "react-meta-course/week01/context-in-react/exercise/exercise.md",
+    "react-meta-course/week02/rules-of-hooks/what-you-need-to-know-before-fetching-data.md",
+    "react-meta-course/week02/rules-of-hooks/what-are-the-rules-of-hooks.md",
+    "react-meta-course/week02/rules-of-hooks/fetching-data-with-hooks.md",
+    "react-meta-course/week02/rules-of-hooks/fetching-data-putting-it-all-together.md",
+    "react-meta-course/week02/rules-of-hooks/data-fetching-using-hooks.md",
+    "react-meta-course/week02/basic-hooks/working-with-complex-data-in-usestate.md",
+    "react-meta-course/week02/basic-hooks/what-is-the-useeffect-hook.md",
+    "react-meta-course/week02/basic-hooks/what-are-side-effects.md",
+    "react-meta-course/week02/basic-hooks/using-the-usestate-hooks.md",
+    "react-meta-course/week02/basic-hooks/using-the-useeffect-hook.md",
+    "react-meta-course/week02/basic-hooks/revising-usestate-hook.md",
+    "react-meta-course/week02/basic-hooks/exercise",
+    "react-meta-course/week02/basic-hooks/additional-resources.md",
+    "react-meta-course/week01/rendering-lists-in-react/using-keys-within-list-components.md",
+    "react-meta-course/week01/rendering-lists-in-react/exercise",
+    "react-meta-course/week01/react-forms/exercise",
+    "react-meta-course/week01/context-in-react/exercise",
+    "react-meta-course/week01/context-in-react/_meta.json",
+    "react-meta-course/week02/rules-of-hooks",
+    "react-meta-course/week02/basic-hooks"
   ]
 }

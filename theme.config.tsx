@@ -23,7 +23,7 @@ const config: DocsThemeConfig = {
     const { frontMatter } = useConfig();
     const url = `${baseUrl}` + (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
     const ogImageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(frontMatter.title || 'Yan Fernandes')}`;
-    
+
     return (
       <>
         <meta property="og:url" content={url} />

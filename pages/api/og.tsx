@@ -36,11 +36,7 @@ export default async function handler(req) {
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <p
-              style={{ fontSize: '72px', fontWeight: 700, marginTop: 4, color: 'whitesmoke' }}
-            >
-              {title}
-            </p>
+            <p style={{ fontSize: '72px', fontWeight: 700, marginTop: 4, color: 'whitesmoke' }}>{title}</p>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             {tags.length > 0 ? (

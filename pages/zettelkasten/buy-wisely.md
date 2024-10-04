@@ -1,6 +1,6 @@
 ---
 title: Buy Wisely
-"description:": Buy Wisely This post is based on the Step Ango Blog's post with the same title
+'description:': Buy Wisely This post is based on the Step Ango Blog's post with the same title
 tags:
   - Zettelkasten
   - Money

@@ -1,12 +1,12 @@
 {
   "index": "Zettelkasten Index",
-  "buy-wisely": "Buy Wisely",
-  "roadMaps": "Road Map",
+  "roadmaps": "Road Map",
   "ui-ux": "UI/UX",
-  "courses": "Courses",
+  "react-meta-course": "React Meta Course",
   "interviews": "Interviews",
   "math": "Math",
-  "learnRustWeb3Devs": "Learn Rust Web3Devs",
+  "learn-rust-web3devs": "Learn Rust Web3Devs",
   "reacthooks": "React Hooks",
+  "buy-wisely": "Buy Wisely",
   "mlops": "MLOps UFBA"
 }
