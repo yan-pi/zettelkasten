@@ -21,3 +21,10 @@
 
 [Design Circuit](https://designcircuit.co/lc/dcschool/)
 
+## Atigos
+
+[Padronizar uso do storybook + figma](https://help.figma.com/hc/en-us/articles/360045003494-Storybook-and-Figma)
+
+[Blog do Figma](https://www.figma.com/resource-library/)
+
+[Developer Apple desing](https://developer.apple.com/design/)
