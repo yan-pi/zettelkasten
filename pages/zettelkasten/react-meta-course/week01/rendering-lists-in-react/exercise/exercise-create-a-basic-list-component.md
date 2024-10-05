@@ -129,4 +129,4 @@ return (
 export default DessertsList;
 ```
 
-## [[Tamplate Solution]]
+## Tamplate Solution

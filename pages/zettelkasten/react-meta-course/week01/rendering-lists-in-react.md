@@ -1,6 +1,6 @@
 #topic
 
-## [[Transforming lists in JavaScript]]
+## Transforming lists in JavaScript
 
 ---
 
@@ -8,14 +8,14 @@ Lists are a common feature in almost every app, and JavaScript provides a powerf
 method. This method allows you to iterate over each element in a list and apply a transformation to it, returning a new
 list with the transformed elements.
 
-## [[Render a simple list component]]
+## Render a simple list component
 
 ---
 
 In the previous topic, you learned how to transform lists of data in JavaScript with the `map` method. In this video,
 you will learn how to display a collection of elements like this with React by using the map function in JSX syntax.
 
-## [[Exercise Create a basic list component]]
+## Exercise Create a basic list component
 
 ---
 
@@ -25,9 +25,9 @@ all sorted by calories, from low to high. The data you have to work with has bee
 file, as an array of objects. Each object represents a dessert and has the following
 properties: name, calories and createdAt.
 
-#### [[Self-review Create a basic List component]]
+#### Self-review Create a basic List component
 
-## [[What are keys in]]
+## What are keys in
 
 ---
 
@@ -35,7 +35,7 @@ Keys are identifiers that help React to determine which items in a list have cha
 also instruct React how to treat a specific element when an update occurs and whether its internal state should be
 preserved or not.
 
-### [[Using Keys within List Components]]
+### Using Keys within List Components
 
 ---
 
@@ -43,7 +43,7 @@ In this comprehensive guide, we will delve into the critical topic of using keys
 components. To aid our understanding, we will use a practical example inspired by the needs of restaurant managers at
 the Little Lemon restaurant who require an application to track their daily tasks.
 
-### _[[Diference Between Key and Id]]_
+###  Diference Between Key and Id_
 
 ---
 
@@ -51,4 +51,4 @@ Therefore, the main difference between `key` and `id` in React is that `key` is 
 and ensuring efficient rendering of elements in a list, while `id` is a general identifier that can be used for any
 purpose but does not provide the same rendering optimizations.
 
-## [[Additional Content List]]
+## Additional Content List

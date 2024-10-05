@@ -45,7 +45,7 @@ pesado.
 5. **Documentação excelente:** A documentação do Vue é clara e abrangente, facilitando o aprendizado e a implementação
    de novas funcionalidades.
 
-   ![[Pasted image 20240815200949.png]]
+    ![[Pasted image 20240815200949.png]]
 
 ## API's do Vue: Options API vs. Composition API
 
