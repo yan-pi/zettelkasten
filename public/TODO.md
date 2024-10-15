@@ -9,17 +9,21 @@ TODO:
 
 # Coisas que quero comprar
 
-- [] Cadeira
-- [] Mesa
-- [] Consertar o computador desktop - Avaliar possibilidade de upgrade -> RODAR HOME SERVER E OU MINI PC PORTATIL
-- [] Notebook "Gamer" -> Rodar LINUX
-- [] Avaliar a possibilidade de usar o desktop como servidor de arquivos e comprar um steam deck para jogar
-- [] Segundo monitor -> monitor de trabalho de 24/27 polegadas e boas cores
+- [x] Cadeira
+- []  Mesa
+- []  Consertar o computador desktop - Avaliar possibilidade de upgrade -> RODAR HOME SERVER E OU MINI PC PORTATIL
+  - []  Placa de video -> RMA da asus - verificar a possibilidade de trocar por uma AMD
+- []  Notebook "Gamer" -> Rodar LINUX
+- []  Avaliar a possibilidade de usar o desktop como servidor de arquivos e comprar um steam deck para jogar
+- []  Segundo monitor -> monitor de trabalho de 24/27 polegadas e boas cores
+- []  Pulseira pra bubu ou colar pra bubu
+- []  Restaurante com bubu
+- []  Planejar ano novo
 
 # Ideias de artigos
 
-- [] Como gamificar me ajudou a escrever mais codigo
-- [] Como o linux me tronou um desenvolvedor melhor
-- [] As diferenças de trabalhar em empresas grandes
-- [] Como o open source me ajudou a crescer como desenvolvedor
-- [] Mentalidade de desenvolvimento federado
+- []  Como gamificar me ajudou a escrever mais codigo
+- []  Como o linux me tronou um desenvolvedor melhord
+- []  As diferenças de trabalhar em empresas grandes
+- []  Como o open source me ajudou a crescer como desenvolvedor
+- []  Mentalidade de desenvolvimento federado

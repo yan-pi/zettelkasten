@@ -1,1 +1,5 @@
-{}
+{
+  "cssTheme": "dracula",
+  "theme": "obsidian",
+  "accentColor": "#ff9500"
+}

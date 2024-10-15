@@ -1,12 +1,16 @@
 ---
-title: 'Learn Rust and Web3 with WEB3DEVS'
-description:
-  'These are the notes I took during the "Learn Rust and Web3" course/bootcamp by the web3devs community, where I built
-  a blockchain using the Polkadot SDK.'
-
-tags: ['Zettelkasten', 'RUST', 'WEB3', 'Blockchain']
-type: 'post'
-author: ['DawsonBotsford', 'Yan Fernandes']
+title: Learn Rust and Web3 with WEB3DEVS
+description: These are the notes I took during the "Learn Rust and Web3" course/bootcamp by the web3devs community, where I built a blockchain using the Polkadot SDK.
+tags:
+  - Zettelkasten
+  - RUST
+  - WEB3
+  - Blockchain
+type: post
+author:
+  - Yan Fernandes
+  - Yan Luiz 
+  - Daniel
 ---
 
 ## Aprenda Rust e Web3 com WEB3DEVS

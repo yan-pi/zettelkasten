@@ -1,0 +1,11 @@
+
+- [x] Tela de auth
+- [x] Tela de Formulario
+- [x] Tela de Dashboard
+- [x] Padronizar no repositorio principal a cor do site institucional :> seguindo o manual de marca
+- [x] Colocar lib de icones padrão na documentação
+- [x] Navbar
+- [ ] Footer
+- [ ] Componente de File-Tree
+- [ ] Email Padrão de mensageria
+- [ ] Campo de Upload de arquivos

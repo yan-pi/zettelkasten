@@ -11,11 +11,28 @@
             "id": "de3f15dfb1a01aa2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "learn-rust-web3devs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e144b3a79f27053c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +137,21 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md"
+              }
+            }
+          },
+          {
+            "id": "49979819b16484e8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
             }
           }
         ]
@@ -135,14 +168,33 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "de3f15dfb1a01aa2",
+  "active": "e144b3a79f27053c",
   "lastOpenFiles": [
-    "react-meta-course.md",
+    "roadmaps/how-to-get-rich-(without-getting-lucky).md",
+    "understanding-algorithms/chapter01/chapter01.md",
+    "understanding-algorithms/chapter-3-recursion.md",
+    "Padronização de telas FESF-SUS.md",
+    "understanding-algorithms.md",
+    "cool-sites-to-use.md",
+    "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
     "learn-rust-web3devs.md",
+    "index.md",
+    "front-end-debug-101.md",
+    "react-meta-course/week01/context-in-react/how-re-rendering-works-with-context.md",
+    "reacthooks/usecallback.md",
+    "roadmaps/sibelius-seraphini---how-to-become-a-better-developer.md",
+    "roadmaps/roadmap-becoming-a-software-developer.md",
+    "roadmaps/i-built-a-$1m-app-in-5-hours.md",
+    "buy-wisely.md",
     "ui-ux/appleInterfaceAnnotations/add-personality-ux-writing.md",
+    "how-to-create-a-personal-brand.md",
+    "reacthooks/usestate.md",
+    "202410070808.md",
+    "react-meta-course.md",
     "ui-ux/ui-ux-studies-content.md",
     "ui-ux/appleInterfaceAnnotations",
     "ui-ux/_meta.json",
@@ -151,25 +203,7 @@
     "react-meta-course/week02/basic-hooks/exercise/exercise.md",
     "react-meta-course/week01/rendering-lists-in-react/exercise/tamplate-solution.md",
     "react-meta-course/week01/rendering-lists-in-react/exercise/exercise-create-a-basic-list-component.md",
-    "react-meta-course/week01/react-forms/exercise/my-solution-(forms).md",
-    "react-meta-course/week01/react-forms/exercise/exercise-create-a-registration-form.md",
-    "react-meta-course/week01/context-in-react/exercise/solution-based.md",
-    "react-meta-course/week01/context-in-react/exercise/my-solution-(context).md",
-    "react-meta-course/week01/context-in-react/exercise/exercise.md",
-    "react-meta-course/week02/rules-of-hooks/what-you-need-to-know-before-fetching-data.md",
-    "react-meta-course/week02/rules-of-hooks/what-are-the-rules-of-hooks.md",
-    "react-meta-course/week02/rules-of-hooks/fetching-data-with-hooks.md",
-    "react-meta-course/week02/rules-of-hooks/fetching-data-putting-it-all-together.md",
-    "react-meta-course/week02/rules-of-hooks/data-fetching-using-hooks.md",
-    "react-meta-course/week02/basic-hooks/working-with-complex-data-in-usestate.md",
-    "react-meta-course/week02/basic-hooks/what-is-the-useeffect-hook.md",
-    "react-meta-course/week02/basic-hooks/what-are-side-effects.md",
-    "react-meta-course/week02/basic-hooks/using-the-usestate-hooks.md",
-    "react-meta-course/week02/basic-hooks/using-the-useeffect-hook.md",
-    "react-meta-course/week02/basic-hooks/revising-usestate-hook.md",
     "react-meta-course/week02/basic-hooks/exercise",
-    "react-meta-course/week02/basic-hooks/additional-resources.md",
-    "react-meta-course/week01/rendering-lists-in-react/using-keys-within-list-components.md",
     "react-meta-course/week01/rendering-lists-in-react/exercise",
     "react-meta-course/week01/react-forms/exercise",
     "react-meta-course/week01/context-in-react/exercise",

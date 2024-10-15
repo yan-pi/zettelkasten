@@ -14,7 +14,6 @@ author:
 ## Buy Wisely
 
 This post is based on the Step Ango Blog's post with the same title: [Buy Wisely](https://stephango.com/buy-wisely).
-
 ### Cost per Use
 
 _"Cost per use is a heuristic that helps me make decisions about most non-perishable purchases such as clothes,
