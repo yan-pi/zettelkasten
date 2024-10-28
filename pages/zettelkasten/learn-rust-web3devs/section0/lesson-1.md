@@ -7,7 +7,7 @@ type: 'post'
 author: 'Yan Fernandes'
 ---
 
-## teste de texto
+## Inicio
 
 Comando básico para inicializar um projeto em Rust:
 
