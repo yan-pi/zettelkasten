@@ -10,29 +10,16 @@
           {
             "id": "de3f15dfb1a01aa2",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "learn-rust-web3devs.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e144b3a79f27053c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -52,7 +39,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -67,7 +56,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -75,7 +66,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -98,7 +91,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +98,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
             }
           },
           {
@@ -115,10 +109,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
             }
           },
           {
@@ -129,7 +124,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -137,9 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md"
-              }
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           },
           {
@@ -151,7 +148,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ]
@@ -172,8 +171,9 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "e144b3a79f27053c",
+  "active": "de3f15dfb1a01aa2",
   "lastOpenFiles": [
+    "learn-rust-web3devs.md",
     "roadmaps/how-to-get-rich-(without-getting-lucky).md",
     "understanding-algorithms/chapter01/chapter01.md",
     "understanding-algorithms/chapter-3-recursion.md",
@@ -181,7 +181,6 @@
     "understanding-algorithms.md",
     "cool-sites-to-use.md",
     "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
-    "learn-rust-web3devs.md",
     "index.md",
     "front-end-debug-101.md",
     "react-meta-course/week01/context-in-react/how-re-rendering-works-with-context.md",
