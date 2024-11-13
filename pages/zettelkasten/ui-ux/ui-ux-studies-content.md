@@ -1,4 +1,4 @@
-## Livros 
+## Livros
 
 [ENVIESADOS: Psicologia e Vieses Cognitivos no Design para criar produtos e serviços](https://www.amazon.com.br/gp/product/6500563859/ref=ox_sc_act_image_1?smid=A1SOUPE98SJTGW&psc=1)
 
@@ -9,7 +9,6 @@
 [Sprint](https://www.amazon.com.br/gp/product/8551001523/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=8551001523&linkCode=as2&tag=designnacuca-20&linkId=a9ffa8bf8c9ab67d3dbaf9d0c217d116)
 
 [Não me faca pensar](https://www.amazon.com.br/gp/product/8576088509/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=8576088509&linkCode=as2&tag=designnacuca-20&linkId=adfc299355943050dfcf95b8702f3c68)
-
 
 ## Cursos
 

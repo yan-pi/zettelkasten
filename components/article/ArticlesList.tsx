@@ -43,7 +43,7 @@ const ArticlesList = () => {
             coverImage={article.cover_image || '/placeholder.svg'}
             authorName={article.user.name}
             authorAvatar={article.user.profile_image || '/placeholder-user.jpg'}
-            date={new Date(article.published_at).toLocaleDateString()}            
+            date={new Date(article.published_at).toLocaleDateString()}
             description={article.description}
             articleUrl={article.url}
           />

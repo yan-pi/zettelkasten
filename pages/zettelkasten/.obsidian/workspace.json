@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "0fd5f09c3e4eab3f",
+    "type": "split",
+    "children": [
+      {
+        "id": "dff6a413ce314897",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de3f15dfb1a01aa2",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "28c30d9478173ea4",
+    "type": "split",
+    "children": [
+      {
+        "id": "983e196f3811f30d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee4c3f8b5ad07210",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "254a01bc8f85356d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e6fd1b8c7b585c01",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "56a2b1d7fb1064fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "815331a1cb2f35b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed6c0ee85b942473",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "31c48017a8059e21",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "2fd77d29a3ecc3fe",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9f6578575db544c1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "49979819b16484e8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "zk-prefixer:Create new unique note": false
+    }
+  },
+  "active": "de3f15dfb1a01aa2",
+  "lastOpenFiles": [
+    "learn-rust-web3devs.md",
+    "roadmaps/how-to-get-rich-(without-getting-lucky).md",
+    "understanding-algorithms/chapter01/chapter01.md",
+    "understanding-algorithms/chapter-3-recursion.md",
+    "Padronização de telas FESF-SUS.md",
+    "understanding-algorithms.md",
+    "cool-sites-to-use.md",
+    "documentacao-microsserviço-autenticação-centralizado-RBAC-ABAC.md",
+    "index.md",
+    "front-end-debug-101.md",
+    "react-meta-course/week01/context-in-react/how-re-rendering-works-with-context.md",
+    "reacthooks/usecallback.md",
+    "roadmaps/sibelius-seraphini---how-to-become-a-better-developer.md",
+    "roadmaps/roadmap-becoming-a-software-developer.md",
+    "roadmaps/i-built-a-$1m-app-in-5-hours.md",
+    "buy-wisely.md",
+    "ui-ux/appleInterfaceAnnotations/add-personality-ux-writing.md",
+    "how-to-create-a-personal-brand.md",
+    "reacthooks/usestate.md",
+    "202410070808.md",
+    "react-meta-course.md",
+    "ui-ux/ui-ux-studies-content.md",
+    "ui-ux/appleInterfaceAnnotations",
+    "ui-ux/_meta.json",
+    "ui-ux",
+    "react-meta-course/week02/basic-hooks/exercise/solution.md",
+    "react-meta-course/week02/basic-hooks/exercise/exercise.md",
+    "react-meta-course/week01/rendering-lists-in-react/exercise/tamplate-solution.md",
+    "react-meta-course/week01/rendering-lists-in-react/exercise/exercise-create-a-basic-list-component.md",
+    "react-meta-course/week02/basic-hooks/exercise",
+    "react-meta-course/week01/rendering-lists-in-react/exercise",
+    "react-meta-course/week01/react-forms/exercise",
+    "react-meta-course/week01/context-in-react/exercise",
+    "react-meta-course/week01/context-in-react/_meta.json",
+    "react-meta-course/week02/rules-of-hooks",
+    "react-meta-course/week02/basic-hooks"
+  ]
+}

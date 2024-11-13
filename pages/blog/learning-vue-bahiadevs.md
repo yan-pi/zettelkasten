@@ -1,162 +1,177 @@
 ---
-title: 'Como começar com Vue.js - Encontro Bahia Devs'
+title: 'Getting Started with Vue.js - Bahia Devs Meetup'
 date: 2024/08/19
-description: 'Estas são minhas notas de uma apresentação sobre Vue.js que tive no open-coding semanal do Bahia Devs.'
+description: 'These are my notes from a presentation on Vue.js that I had during the weekly open-coding session of Bahia Devs.'
 category: ['Programming', 'Vuejs', 'JavaScript', 'Frontend']
 type: 'post'
 author: 'Yan Fernandes'
 ---
 
-## O que é Vue.js?
-_____
-Vue.js é um framework JavaScript progressivo para a construção de interfaces de usuário. Foi projetado para ser flexível e adotado de forma incremental, o que significa que você pode usar apenas o que precisar. É possível integrar Vue em projetos já existentes ou usá-lo para criar aplicações completas, como SPAs (Single Page Applications).
+## What is Vue.js?
 
-## Contexto Histórico
-_____
-**Criado por:** Evan You  <- Mesmo criador do [Vite](https://vitejs.dev/)
+---
 
-**Lançado em:** Fevereiro de 2014  
+Vue.js is a progressive JavaScript framework for building user interfaces. It is designed to be flexible and adopted incrementally, which means you can use only what you need. Vue can be integrated into existing projects or used to create complete applications, such as SPAs (Single Page Applications).
 
-**Contexto:** Evan You trabalhava no Google usando AngularJS em diversos projetos. Ele sentiu a necessidade de criar algo mais leve e flexível, pegando as partes que mais gostava do Angular e simplificando o que considerava complexo ou pesado.
+## Historical Context
 
-## O que faz o Vue.js ser Diferente?
-____
-1. **Curva de aprendizado suave:** Vue é fácil de aprender, especialmente para quem já conhece HTML, CSS e JavaScript.
-  
-2. **Flexibilidade e escalabilidade:** Você pode usar Vue para projetos pequenos ou grandes, ajustando sua arquitetura conforme a necessidade.
-  
-3. **Desempenho otimizado:** Vue é rápido e eficiente, com uma arquitetura reativa que garante atualizações automáticas da interface quando os dados mudam.
-  
-4. **Ecossistema rico, mas não opressor:** O ecossistema Vue é poderoso e inclui ferramentas como Vue Router, Vuex e o Vue CLI, mas você pode optar por usá-los conforme necessário.
-  
-5. **Documentação excelente:** A documentação do Vue é clara e abrangente, facilitando o aprendizado e a implementação de novas funcionalidades.
-   
-   ![[Pasted image 20240815200949.png]]
+---
 
-## API's do Vue: Options API vs. Composition API
-_____
-Ao desenvolver componentes Vue, você pode optar por duas abordagens principais: **Options API** e **Composition API**. Ambas são poderosas e suportam casos de uso comuns, mas possuem diferenças que influenciam a maneira como você estrutura e organiza seu código.
+**Created by:** Evan You <- Also the creator of [Vite](https://vitejs.dev/)
+
+**Released in:** February 2014
+
+**Context:** Evan You was working at Google using AngularJS on various projects. He felt the need to create something lighter and more flexible, taking the parts he liked most from Angular and simplifying what he considered complex or heavy.
+
+## What Makes Vue.js Different?
+
+---
+
+1. **Gentle learning curve:** Vue is easy to learn, especially for those already familiar with HTML, CSS, and JavaScript.
+
+2. **Flexibility and scalability:** You can use Vue for small or large projects, adjusting its architecture as needed.
+
+3. **Optimized performance:** Vue is fast and efficient, with a reactive architecture that ensures automatic updates to the interface when data changes.
+
+4. **Rich ecosystem, but not overwhelming:** The Vue ecosystem is powerful and includes tools like Vue Router, Vuex, and the Vue CLI, but you can choose to use them as needed.
+
+5. **Excellent documentation:** Vue's documentation is clear and comprehensive, making it easy to learn and implement new features.
+
+![Pasted image 20240815200949.png]
+
+## Vue APIs: Options API vs. Composition API
+
+---
+
+When developing Vue components, you can choose between two main approaches: **Options API** and **Composition API**. Both are powerful and support common use cases but have differences that influence how you structure and organize your code.
 
 ### Options API
-_____
 
-A **Options API** é a abordagem mais tradicional e amplamente utilizada em Vue.js, especialmente em versões anteriores à 3.0. Com essa API, você define a lógica do componente utilizando um objeto de opções, como `data`, `methods`, e `mounted`. As propriedades definidas nas opções são expostas dentro de funções através de `this`, que faz referência à instância do componente.
+---
 
-**Exemplo de Options API:**
+The **Options API** is the more traditional and widely used approach in Vue.js, especially in versions prior to 3.0. With this API, you define the component logic using an options object, such as `data`, `methods`, and `mounted`. The properties defined in the options are exposed within functions via `this`, which refers to the component instance.
+
+**Options API Example:**
 
 ```vue
 <script>
 export default {
-  // Dados reativos expostos por meio de `this`
+  // Reactive data exposed through `this`
   data() {
     return {
-      count: 0
+      count: 0,
     };
   },
 
-  // Métodos para manipulação de estado e que disparam atualizações
+  // Methods for state manipulation that trigger updates
   methods: {
     increment() {
       this.count++;
-    }
+    },
   },
 
-  // Hooks de ciclo de vida
+  // Lifecycle hooks
   mounted() {
-    console.log(`O valor inicial é ${this.count}.`);
-  }
+    console.log(`The initial value is ${this.count}.`);
+  },
 };
 </script>
 
 <template>
-  <button @click="increment">O valor é: {{ count }}</button>
+  <button @click="increment">The value is: {{ count }}</button>
 </template>
 ```
 
-**Vantagens da Options API:**
-- **Facilidade de uso:** A Options API é intuitiva, especialmente para iniciantes, e organiza o código de maneira clara e estruturada.
-- **Modelo mental OOP:** Alinha-se bem com a mentalidade orientada a objetos, sendo mais próxima de uma classe onde `this` faz referência à instância do componente.
+**Advantages of the Options API:**
 
-**Quando usar a Options API?**
-- Quando você não está usando ferramentas de build (PWAS) ou planeja usar Vue principalmente para cenários de baixa complexidade.
-- Quando a clareza e a simplicidade na organização do código são prioridades, como em projetos pequenos ou para iniciantes.
+- **Ease of use:** The Options API is intuitive, especially for beginners, and organizes code in a clear and structured way.
+- **OOP mental model:** Aligns well with an object-oriented mentality, being closer to a class where `this` refers to the component instance.
+
+**When to use the Options API?**
+
+- When you are not using build tools (PWAs) or plan to use Vue primarily for low-complexity scenarios.
+- When clarity and simplicity in code organization are priorities, such as in small projects or for beginners.
 
 ### Composition API
 
-A **Composition API** foi introduzida no Vue 3 e permite que você defina a lógica do componente usando funções importadas. Em componentes de arquivo único (SFCs), a Composition API é frequentemente utilizada com a diretiva `<script setup>`, que permite escrever código com menos boilerplate.
+The **Composition API** was introduced in Vue 3 and allows you to define component logic using imported functions. In single-file components (SFCs), the Composition API is often used with the `<script setup>` directive, which allows you to write code with less boilerplate.
 
-**Exemplo de Composition API com `<script setup>`:**
+**Composition API Example with `<script setup>`:**
 
 ```vue
 <script setup>
 import { ref, onMounted } from 'vue';
 
-// Estado reativo
+// Reactive state
 const count = ref(0);
 
-// Funções que manipulam o estado e disparam atualizações
+// Functions that manipulate the state and trigger updates
 function increment() {
   count.value++;
 }
 
-// Hooks de ciclo de vida
+// Lifecycle hooks
 onMounted(() => {
-  console.log(`O valor inicial é ${count.value}.`);
+  console.log(`The initial value is ${count.value}.`);
 });
 </script>
 
 <template>
-  <button @click="increment">O valor é: {{ count }}</button>
+  <button @click="increment">The value is: {{ count }}</button>
 </template>
 ```
 
-**Vantagens da Composition API:**
-- **Flexibilidade:** Permite a composição de lógica de estado reativo de múltiplas funções, o que facilita a reutilização e organização de código complexo.
-- **Poderoso para aplicações grandes:** A flexibilidade e a modularidade da Composition API a tornam ideal para projetos grandes e complexos.
+**Advantages of the Composition API:**
 
-**Quando usar a Composition API?**
-- Quando você planeja construir aplicações completas com Vue, especialmente usando ferramentas de build modernas.
-- Quando você precisa de padrões mais poderosos para organizar e reutilizar lógica em projetos complexos.
+- **Flexibility:** Allows the composition of reactive state logic from multiple functions, making it easier to reuse and organize complex code.
+- **Powerful for large applications:** The flexibility and modularity of the Composition API make it ideal for large and complex projects.
 
-### Qual Escolher?
+**When to use the Composition API?**
 
-Ambas as APIs têm suas vantagens, e a escolha depende do contexto e da complexidade do seu projeto:
+- When you plan to build complete applications with Vue, especially using modern build tools.
+- When you need more powerful patterns to organize and reuse logic in complex projects.
 
-- **Para aprendizado:** Escolha a que parecer mais intuitiva para você. A maioria dos conceitos centrais são compartilhados entre as duas.
-- **Para produção:**
-  - Use **Options API** se você não está utilizando ferramentas de build ou se o projeto é de baixa complexidade.
-  - Use **Composition API** + **Single-File Components** se você está construindo aplicações completas e complexas.
+### Which to Choose?
 
-### Exemplos e Comparações
+Both APIs have their advantages, and the choice depends on the context and complexity of your project:
 
-Aqui está um comparativo entre as duas APIs usando o mesmo exemplo de componente:
+- **For learning:** Choose the one that seems more intuitive to you. Most core concepts are shared between the two.
+- **For production:**
+  - Use **Options API** if you are not using build tools or if the project is of low complexity.
+  - Use **Composition API** + **Single-File Components** if you are building complete and complex applications.
+
+### Examples and Comparisons
+
+Here is a comparison between the two APIs using the same component example:
 
 **Options API:**
+
 ```vue
 <script>
 export default {
   data() {
     return {
-      message: 'Hello Vue!'
+      message: 'Hello Vue!',
     };
   },
   methods: {
     reverseMessage() {
       this.message = this.message.split('').reverse().join('');
-    }
-  }
+    },
+  },
 };
 </script>
 
 <template>
   <div>
     <p>{{ message }}</p>
-    <button @click="reverseMessage">Reverter Mensagem</button>
+    <button @click="reverseMessage">Reverse Message</button>
   </div>
 </template>
 ```
 
 **Composition API:**
+
 ```vue
 <script setup>
 import { ref } from 'vue';
@@ -171,23 +186,26 @@ function reverseMessage() {
 <template>
   <div>
     <p>{{ message }}</p>
-    <button @click="reverseMessage">Reverter Mensagem</button>
+    <button @click="reverseMessage">Reverse Message</button>
   </div>
 </template>
 ```
 
-### Recomendações Gerais
+### General Recommendations
 
-- **Para projetos novos:** Considere iniciar com a **Composition API** se planeja escalar a aplicação. No entanto, a **Options API** continua sendo uma excelente escolha, especialmente para projetos menos complexos.
-- **Para quem já usa Options API:** Não há necessidade de migrar imediatamente para a Composition API, mas vale a pena aprender e considerar seu uso em novos projetos ou quando a flexibilidade adicional for benéfica.
+- **For new projects:** Consider starting with the **Composition API** if you plan to scale the application. However, the **Options API** remains an excellent choice, especially for less complex projects.
+- **For those already using the Options API:** There’s no need to migrate immediately to the Composition API, but it’s worth learning and considering for new projects or when additional flexibility is beneficial.
 
-Esses tópicos cobrem as principais diferenças e usos das APIs do Vue, permitindo que você escolha a abordagem que melhor se adapta ao seu projeto e nível de experiência.
+These topics cover the main differences and uses of Vue APIs, allowing you to choose the approach that best fits your project and level of experience.
 
 ## SFC (Single File Components)
-_____
-Um dos grandes diferenciais do Vue é o conceito de **Single File Components (SFCs)**. Esses componentes combinam o template, o script e o estilo em um único arquivo `.vue`, facilitando a modularização e a organização do código.
 
-**Exemplo de um SFC:**
+---
+
+One of the great differentiators of Vue is the concept of **Single File Components (SFCs)**. These components combine the template, script, and style in a single `.vue` file, facilitating modularization and code organization.
+
+**Example of an SFC:**
+
 ```vue
 <template>
   <div>
@@ -199,9 +217,9 @@ Um dos grandes diferenciais do Vue é o conceito de **Single File Components (SF
 export default {
   data() {
     return {
-      message: 'Hello Vue!'
+      message: 'Hello Vue!',
     };
-  }
+  },
 };
 </script>
 
@@ -213,287 +231,119 @@ h1 {
 ```
 
 ## Data Binding
-___
 
-O Vue.js permite a ligação bidirecional de dados (two-way data binding), que sincroniza automaticamente os dados do modelo (JavaScript) com a interface (HTML).
+---
 
-**Exemplo:**
+Vue.js allows for two-way data binding, which automatically synchronizes model data (JavaScript) with the interface (HTML).
+
+**Example:**
+
 ```html
 <div id="app">
-  <input v-model="message">
+  <input v-model="message" />
   <p>{{ message }}</p>
 </div>
 
 <script>
-new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-});
+  new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!',
+    },
+  });
 </script>
 ```
 
 ## Lifecycle Hooks
-_____
 
-O Vue.js possui um ciclo de vida de componente que oferece hooks que permitem executar código em diferentes momentos do ciclo de vida de um componente.
+---
 
-**Principais hooks:**
-- `created`: Chamado após a instância ser criada.
-- `mounted`: Chamado após a instância ser montada no DOM.
-- `updated`: Chamado após uma atualização reativa.
-- `destroyed`: Chamado após a instância ser destruída.
+Vue.js has a component lifecycle that provides hooks allowing you to execute code at different moments in a component's lifecycle.
 
-**Exemplo:**
+**Main hooks:**
+
+- `created`: Called after the instance is created.
+- `mounted`: Called after the instance is mounted to the DOM.
+- `updated`: Called after a reactive update.
+- `destroyed`: Called after the instance is destroyed.
+
+**Example:**
+
 ```javascript
 new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    message: 'Hello Vue!',
   },
   created() {
-    console.log('Componente criado!');
+    console.log('Component created!');
   },
   mounted() {
-    console.log('Componente montado no DOM!');
-  }
+    console.log('Component mounted to DOM!');
+  },
 });
 ```
 
-## Diretivas
-____
+## Directives
 
-Vue.js oferece uma série de diretivas que permitem manipular o DOM de forma declarativa.
+---
 
-**Algumas das principais diretivas:**
-- `v-if`: Renderiza o elemento condicionalmente.
-- `v-for`: Itera sobre uma coleção de dados.
-- `v-bind`: Liga um atributo do HTML a uma expressão.
-- `v-on`: Liga eventos DOM a métodos.
-- `v-model`: Ligação bidirecional de dados.
+Vue.js offers a series of directives that allow for declarative DOM manipulation.
 
-**Exemplo:**
+**Some of the main directives:**
+
+- `v-if`: Conditionally renders the element.
+- `v-for`: Iterates over a collection of data.
+- `v-bind`: Binds an HTML attribute to an expression.
+- `v-on`: Binds DOM events to methods.
+- `v-model`: Two-way data binding.
+
+**Example:**
+
 ```html
 <div id="app">
-  <p v-if="isVisible">Este texto é visível.</p>
+  <p v-if="isVisible">This text is visible.</p>
   <ul>
     <li v-for="item in items">{{ item }}</li>
   </ul>
-  <input v-model="message">
-  <button v-on:click="showAlert">Mostrar Alerta</button>
+  <input v-model="message" />
+  <button v-on:click="showAlert">Show Alert</button>
 </div>
 
 <script>
-new Vue({
-  el: '#app',
-  data: {
-    isVisible: true,
-    items: ['Item 1', 'Item 2', 'Item 3'],
-    message: 'Hello Vue!'
-  },
-  methods: {
-    showAlert() {
-      alert(this.message);
-    }
-  }
-});
+  new Vue({
+    el: '#app',
+    data: {
+      isVisible: true,
+      items: ['Item 1', 'Item 2', 'Item 3'],
+      message: 'Hello Vue!',
+    },
+    methods
+
+: {
+      showAlert() {
+        alert(this.message);
+      },
+    },
+  });
 </script>
 ```
 
-## Reatividade
+## Conclusion
 
-Vue.js é reativo, o que significa que ele detecta mudanças nos dados e atualiza a interface automaticamente.
+---
 
-**Exemplo:**
-```javascript
-const vm = new Vue({
-  el: '#app',
-  data: {
-    count: 0
-  }
-});
+Vue.js is a powerful and flexible framework that offers a gentle learning curve and an extensive ecosystem for building applications. Understanding the different approaches and features is essential for developing scalable and efficient applications.
 
-// Atualizar count incrementa automaticamente a exibição
-vm.count++;
-```
+---
 
-## Props & Events
+## References
 
-**Props:** São usadas para passar dados de um componente pai para um filho.
+- [Official Vue.js documentation](https://vuejs.org/)
+- [Vue.js API Reference](https://vuejs.org/api/)
+- [Vue Router documentation](https://router.vuejs.org/)
+- [Vuex documentation](https://vuex.vuejs.org/)
 
-**Events:** São usados para comunicação de volta do componente filho para o pai.
+---
 
-**Exemplo:**
-```vue
-<!-- Componente Pai -->
-<template>
-  <div>
-    <child-component :message="parentMessage" @child-event="handleEvent"></child-component>
-  </div>
-</template>
-
-<script>
-import ChildComponent from './ChildComponent.vue';
-
-export default {
-  data() {
-    return {
-      parentMessage: 'Hello from Parent'
-    };
-  },
-  methods: {
-    handleEvent(payload) {
-      console.log('Evento recebido do filho:', payload);
-    }
-  },
-  components: {
-    ChildComponent
-  }
-};
-</script>
-
-<!-- Componente Filho -->
-<template>
-  <div>
-    <p>{{ message }}</p>
-    <button @click="emitEvent">Emitir Evento</button>
-  </div>
-</template>
-
-<script>
-export default {
-  props: ['message'],
-  methods: {
-    emitEvent() {
-      this.$emit('child-event', 'Hello from Child');
-    }
-  }
-};
-</script>
-```
-
-## HTTP Requests
-
-Para fazer requisições HTTP, o Vue.js pode ser usado com bibliotecas como Axios ou a Fetch API.
-
-**Exemplo usando Axios:**
-```javascript
-import axios from 'axios';
-
-new Vue({
-  el: '#app',
-  data: {
-    posts: []
-  },
-  created() {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(response => {
-        this.posts = response.data;
-      })
-      .catch(error => {
-        console.error('Erro ao buscar posts:', error);
-      });
-  }
-});
-```
-
-## Template
-
-O sistema de templates do Vue.js é baseado em HTML, com suporte para interpolações e diretivas.
-
-**Exemplo:**
-```html
-<div id="app">
-  <p>{{ message }}</p>
-  <p>{{ reversedMessage }}</p>
-</div>
-
-<script>
-new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  },
-  computed: {
-    reversedMessage() {
-      return this.message.split('').reverse().join('');
-    }
-  }
-});
-</script>
-```
-
-## Provide/Injec
-_____
-
-**Provide/Inject** permite passar dados de um componente pai para um descendente profundo, evitando o encadeamento de props.
-
-**Exemplo:**
-```javascript
-Vue.component('provider', {
-  provide() {
-    return {
-      sharedData: 'Data compartilhada'
-    };
-  },
-  template: '<child-component></child-component>'
-});
-
-Vue.component('child-component', {
-  inject: ['sharedData'],
-  template: '<p>{{ sharedData }}</p>'
-});
-
-new Vue({
-  el: '#app'
-});
-```
-
-## Construindo Aplicações Grandes
-_____
-
-Para grandes aplicações, é recomendável adotar uma arquitetura modular. Isso inclui:
-
-1. **Organização por módulos:** Dividir a aplicação em módulos organizados por funcionalidade.
-  
-2. **Uso de Vuex ou Pinia para gerenciamento de estado:** Vuex é a solução oficial de Vue.js para gerenciamento de estado centralizado, ideal para aplicações maiores onde o estado precisa ser compartilhado entre muitos componentes.
-  
-3. **Roteamento com Vue Router:** O Vue Router facilita a navegação entre diferentes páginas e componentes.
-  
-4. **Componentização:** Componentes reutilizáveis ajudam a manter o código organizado e modular.
-  
-5. **Lazy loading:** Carregamento assíncrono de módulos e componentes para otimizar o desempenho.
-  
-6. **Testes:** Implementar testes unitários e de integração para garantir a qualidade do código.
-  
-7. **Uso de TypeScript (Recomendação):** TypeScript ajuda a adicionar tipagem estática, o que facilita a manutenção e detecção de erros.
-
-**Exemplo de Arquitetura Modular:**
-____
-
-```plaintext
-src/
-  components/
-    Header.vue
-    Footer.vue
-  modules/
-    auth/
-      Login.vue
-      Register.vue
-    dashboard/
-      Dashboard.vue
-      Stats.vue
-  store/
-    index.js
-    auth.js
-    dashboard.js
-  router/
-    index.js
-```
-
-Essa estrutura modular ajuda a manter o código organizado, reutilizável
-_____
-[Vue.js Modular Architecture Codebase](https://github.com/DarkC0der11/vue-modular-architecture/tree/main/src/modules/cart)
-
-[Vue.js Modular Architecture - Video Guide](https://www.youtube.com/@sanjarmirakhmedov8311)
+Feel free to modify any sections to better fit your style or add any additional insights you have!
