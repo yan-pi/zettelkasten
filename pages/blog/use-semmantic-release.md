@@ -88,7 +88,6 @@ A precedência **DEVE** ser calculada com base na comparação numérica dos ide
 
 > **Nota:** Após salvar ou publicar, você pode visualizar suas releases no feed de releases do repositório.
 
-Para mais informações, consulte [Viewing your repository's releases and tags](#).
 
 ## Bookmarks
 
