@@ -7,7 +7,7 @@ author: 'Yan Fernandes'
 ---
 
 The `useEffect` hook is a vital part of React's functional component API, allowing you to perform side effects in your
-components. Side effects are actions that occur outside the usual flow of your component's render cycle, such as data
+Side effects are actions that occur outside the usual flow of your component's render cycle, such as data
 fetching, DOM manipulation, and subscriptions. _Obs: its triggered by a [[useState changing_]]
 
 Here's how `useEffect` works:
@@ -18,7 +18,8 @@ Here's how `useEffect` works:
    import React, { useEffect } from 'react';
    ```
 
-2. **Declaring Effects:** You define your side effects by providing a function as the first argument to `useEffect`.
+  
+1. **Declaring Effects:** You define your side effects by providing a function as the first argument to `useEffect`.
    This function will be executed after the component has rendered. This is where you put code that has side effects,
    like data fetching, updating the DOM, or setting up subscriptions.
 
