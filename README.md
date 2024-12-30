@@ -1,56 +1,84 @@
-# Zettelkasten Repository
+# Turborepo starter
 
-[![](.github/screenshot2.png)](https://nextra-docs-template.vercel.app)
+This is an official starter Turborepo.
 
-Welcome to my Zettelkasten repository! This repository serves as a digital knowledge base organized using the
-Zettelkasten method. Each note is a self-contained unit of knowledge, interconnected through a network of references and
-associations.
+## Using this example
 
-## What is Zettelkasten?
+Run the following command:
 
-Zettelkasten, meaning "slip box" in English, is a method of organizing knowledge developed by sociologist Niklas
-Luhmann. It involves creating small notes, or "Zettels," containing ideas, insights, quotes, and references. These notes
-are then linked together in a non-linear manner, allowing for the emergence of new connections and insights over time.
+```sh
+npx create-turbo@latest
+```
 
-## Contents
+## What's inside?
 
-- **Notes**: Explore the collection of interconnected notes covering various topics such as technology, philosophy,
-  literature, and more.
-- **Tags**: Browse notes by specific topics or themes using tags.
-- **Contributing**: Interested in contributing? Find out how you can contribute to the repository.
+This Turborepo includes the following packages/apps:
 
-## How to Use
+### Apps and Packages
 
-1. **Explore Notes**: Dive into the collection of notes to discover insights and ideas.
-2. **Follow Links**: Notes are interconnected through hyperlinks. Click on any link to explore related concepts.
-3. **Browse by Tags**: Use tags to find notes related to specific topics or themes.
-4. **Contribute**: If you have insights, additional resources, or corrections, feel free to contribute by opening a pull
-   request or issue.
+- `docs`: a [Next.js](https://nextjs.org/) app
+- `web`: another [Next.js](https://nextjs.org/) app
+- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
-## About
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-This repository is powered by [Nextra](https://nextra.vercel.app/), a Next.js-based MDX framework, making it easy to
-create and maintain a digital knowledge repository.
+### Utilities
 
-## Get Started
+This Turborepo has some additional tools already setup for you:
 
-To get started, explore the notes in the repository or use the search functionality to find specific topics. Happy
-exploring!
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
 
-## Contributing
+### Build
 
-Contributions to this Zettelkasten are welcome! If you have insights, additional information, or related concepts to
-share, you can contribute by creating new notes or expanding existing ones. To contribute, simply fork this repository,
-make your changes, and submit a pull request. Be sure to follow the guidelines outlined in the CONTRIBUTING.md file.
+To build all apps and packages, run the following command:
 
-## Feedback
+```
+cd my-turborepo
+pnpm build
+```
 
-Feedback and suggestions for improving this Zettelkasten are appreciated. If you have any ideas for new features,
-improvements, or topics to explore, please feel free to open an issue or reach out to me directly.
+### Develop
 
-## License
+To develop all apps and packages, run the following command:
 
-This Zettelkasten is licensed under the
-[Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). You are free to
-share and adapt the contents of this Zettelkasten for any purpose, provided you give appropriate credit and indicate if
-changes were made.
+```
+cd my-turborepo
+pnpm dev
+```
+
+### Remote Caching
+
+> [!TIP]
+> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+
+Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+
+```
+cd my-turborepo
+npx turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+
+```
+npx turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
