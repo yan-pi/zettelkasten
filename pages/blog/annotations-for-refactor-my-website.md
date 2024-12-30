@@ -1,0 +1,2 @@
+- fumadocs : documentation to be my zettelkasten landingpage and blog
+- api + webhooks : to be able to integrate with other services (think if it has usecase) 
